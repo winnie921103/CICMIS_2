@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabs.css">
+    <link rel="stylesheet" href="../css/tabstyles.css">
+</head>
+<body class="iframepage">
+    <div class="whiteBg">
+        <div class="title between">
+            <div class="flex-end">
+                <h3><i class="fas fa-angle-double-right"></i>個案總表</h3>
+            </div>
+            <div class="btnAll">
+                <a href="page/listNHstatus_Nurse.html" class="btn orange_btn patientDetail">我的個案</a>
+                <a href="javascript;;" class="btn patientDetail">護理師</a>
+                <a href="javascript;;" class="btn patientDetail">安寧</a>
+            </div>
+        </div>
+        <section>
+            <div class="tabs tabs-style-topline">
+                <nav>
+                    <ul>
+                        <li><a href="#section-topline-1"><span>申請列表(4)</span></a></li>
+                        <li><a href="#section-topline-2"><span>待訪視(3)</span></a></li>
+                        <li><a href="#section-topline-3"><span>管案清單(5)</span></a></li>
+                        <li><a href="#section-topline-4"><span>統計總表</span></a></li>
+                    </ul>
+                </nav>
+                <div class="content-wrap">
+                    <!--申請列表內容-->
+                    <section id="section-topline-1">
+                        <div class="tableAll">
+                        <div class="toolBar between">
+                            <div class="formList flex">
+                                <div class="form-group flex">
+                                    <label>病歷號：</label>
+                                    <div class="pFormItem">
+                                        <div class="divFormItem txDivFormItem">
+                                            <input class="formItem textFormItem" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group flex">
+                                    <label>個案姓名：</label>
+                                    <div class="pFormItem">
+                                        <div class="divFormItem txDivFormItem">
+                                            <input class="formItem textFormItem" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                <div class="tableDetail">
+                                    <p> **照會中/未派案/門診病人有醫囑單的        **順序: 照會中-->未派案 ; 再個別依據申請日期由小到大排</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table tableList table-striped table-bordered table-hover ">
+                                <thead>
+                                <tr>
+                                    <th scope="col">個案姓名</th>
+                                    <th scope="col">病歷號</th>
+                                    <th scope="col">申請單位</th>
+                                    <th scope="col">申請科別</th>
+                                    <th scope="col">申請日期</th>
+                                    <th scope="col">住院日期</th>
+                                    <th scope="col">出院日期</th>
+                                    <th scope="col">地址</th>
+                                    <th scope="col">聯絡電話</th>
+                                    <th scope="col">個案狀態</th>
+                                    <th scope="col">功能</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="blue">照會中</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">照會回覆</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>王OO</td>
+                                    <td>12345678911</td>
+                                    <td>A168</td>
+                                    <td>神經內科</td>
+                                    <td>2019/08/17</td>
+                                    <td>2019/08/22</td>
+                                    <td>2019/08/30</td>
+                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
+                                    <td>02-22233445</td>
+                                    <td><span class="red">未派案</span></td>
+                                    <td> <div class="tableBtn">
+                                        <button class="btn">分派</button>
+                                        <button class="btn">退案</button>
+                                        <button class="btn">結案</button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </section>
+                    <!--待訪視內容-->
+                    <section id="section-topline-2">
+                        <div class="tableAll">
+                            <div class="toolBar between">
+                                <div class="formList flex">
+                                    <div class="form-group flex">
+                                        <label>病歷號：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <label>個案姓名：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                    <div class="tableDetail">
+                                        <p> **已分派尚未初訪</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tableList table-striped table-bordered table-hover ">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">個案姓名</th>
+                                        <th scope="col">病歷號</th>
+                                        <th scope="col">申請單位</th>
+                                        <th scope="col">申請科別</th>
+                                        <th scope="col">申請日期</th>
+                                        <th scope="col">居家護理師</th>
+                                        <th scope="col">功能</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!--管案清單內容-->
+                    <section id="section-topline-3">
+                        <div class="accordion" id="accordionExample">
+                            <div class="formList">
+                                <div class="card-header flex" id="headingOne">
+                                    <div class="titel_btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        住院清單
+                                    </div>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                                    <div class="tableAll">
+                                        <div class="toolBar between">
+                                            <div class="formList flex">
+                                                <div class="form-group flex">
+                                                    <label>病歷號：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group flex">
+                                                    <label>個案姓名：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                                <button class="btn orange_btn">轉住院</button>
+                                                <div class="tableDetail">
+                                                    <p>**已收案但在住院中的個案 </p>
+                                                    <p>**若個案在其他醫院住院, 點選[轉住院], 轉換個案狀態後, 顯示在下列清單中。點選[轉在宅]即視為未住院, 回到已派案清單 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table tableList table-striped table-bordered table-hover ">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">個案姓名</th>
+                                                    <th scope="col">病歷號</th>
+                                                    <th scope="col">病房</th>
+                                                    <th scope="col">床號</th>
+                                                    <th scope="col">住院日期</th>
+                                                    <th scope="col">住院天數</th>
+                                                    <th scope="col">居家護理師</th>
+                                                    <th scope="col">個案狀態</th>
+                                                    <th scope="col">功能</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td></td>
+                                                    <td><span class="red">未派案</span></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formList">
+                                <div class="card-header flex" id="headingTwo">
+                                    <div class="titel_btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                       管案清單
+                                    </div>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                                    <div class="tableAll">
+                                        <div class="toolBar between">
+                                            <div class="formList flex">
+                                                <div class="form-group flex">
+                                                    <label>病歷號：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group flex">
+                                                    <label>個案姓名：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                                <div class="tableDetail">
+                                                    <p>**初訪記錄完成才算收案</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table tableList table-striped table-bordered table-hover ">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">個案姓名</th>
+                                                    <th scope="col">病歷號</th>
+                                                    <th scope="col">生日</th>
+                                                    <th scope="col">案別</th>
+                                                    <th scope="col">收案日</th>
+                                                    <th scope="col">VPN到期日</th>
+                                                    <th scope="col">居家護理師</th>
+                                                    <th scope="col">功能</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>一般在宅</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>重度居家醫療</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>機構個案</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--統計總表內容-->
+                    <section id="section-topline-4">
+                        <div class="tableAll flex_wrap flex map">
+                            <div class="reportTable">
+                                <table class="table table-bordered">
+                                    <caption>護理師管案數</caption>
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>黃美淑</th>
+                                        <th>胡麗慧</th>
+                                        <th>李淑娟</th>
+                                        <th>蘇美琴</th>
+                                        <th>楊素茹</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>居家醫療</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>居家護理</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>重度居家護理</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>長照個案</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>機構</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                        <td align="right">8</td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="reportImg">
+                                <img src="../image/NH-01.jpg" alt="居家護理管案總數">
+                            </div>
+                        </div>
+                    </section>
+                </div><!-- /content -->
+            </div><!-- /tabs -->
+        </section>
+    </div>
+    <!--JS -->
+    <script src="../puglin/jquery-3.4.1.min.js"></script>
+    <script src="../puglin/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/cbpFWTabs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.patientDetail").on('click',function(e){
+                e.preventDefault();
+                var srcLink = $(this).attr("href");
+                window.parent.postMessage(srcLink, '*');
+            });
+        });
+        (function() {
+
+            [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+                new CBPFWTabs( el );
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabs.css">
+    <link rel="stylesheet" href="../css/tabstyles.css">
+</head>
+<body class="iframepage Visit">
+<div class="whiteBg">
+    <div class="title between">
+        <div class="flex-end">
+            <h3><i class="fas fa-angle-double-right"></i>每次評估</h3>
+        </div>
+        <div class="btnAll">
+            <a href="page/page02_2.html" class="btn orange_btn patientDetail">暫存</a>
+            <a href="javascript;;" class="btn patientDetail green_btn">新增存檔</a>
+            <a href="javascript;;" class="btn patientDetail red_btn" onClick="doCancel()">放棄目前修改資料</a>
+        </div>
+    </div>
+    <form class="form formMore">
+        <div class="table_control table-responsive">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                <tr>
+                    <th colspan="3">記錄日期：</th>
+                    <td>
+                        <div class="formList datetime flex">
+                            <div class="form-group flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem dtDivFormItem">
+                                        <input class="formItem dtFormItem" type="hidden">
+                                        <input class="dtDateFormItem" type="text" value="2019/06/30"/>
+                                        <input class="dtTimeFormItem" type="text" value="11:30"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%" rowspan="5">
+                        生命徵象 <br>
+                        (不ditto)<br>
+                        (正常值檢核)</th>
+                    <th colspan="2">體溫</th>
+                    <td class="between">
+                        <div class="formList flex">
+                            <div class="form-group flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem txDivFormItem">
+                                        <input class="formItem textFormItem" type="text">
+                                    </div>
+                                </div>
+                                <label>℃</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 心跳</th>
+                    <td>
+                        <div class="formList flex">
+                            <div class="form-group flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem txDivFormItem">
+                                        <input class="formItem textFormItem" type="text">
+                                    </div>
+                                </div>
+                                <label>次/分</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 呼吸</th>
+                    <td>
+                        <div class="formList flex">
+                            <div class="form-group flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem txDivFormItem">
+                                        <input class="formItem textFormItem" type="text">
+                                    </div>
+                                </div>
+                                <label>次/分</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 血壓</th>
+                    <td>
+                        <div class="formList flex">
+                            <div class="form-group flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem txDivFormItem">
+                                        <input class="formItem textFormItem" type="text">
+                                    </div>
+                                </div>
+                                <label>/</label>
+                                <div class="pFormItem">
+                                    <div class="divFormItem txDivFormItem">
+                                        <input class="formItem textFormItem" type="text">
+                                    </div>
+                                </div>
+                                <label>mmHg</label>
+                            </div>
+                        </div>
+                        <div class="subChoice radioBox flex">
+                            <label>部位：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="form1_1" name="A1" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_1">右手</label>
+                                    <input id="form1_2" name="A1" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_2">左手</label>
+                                    <input id="form1_3" name="A1" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_3">右腳</label>
+                                    <input id="form1_4" name="A1" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_4">左腳</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subChoice radioBox flex">
+                            <label>姿勢：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="form1_5" name="A2" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_5">躺</label>
+                                    <input id="form1_6" name="A2" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_6">坐</label>
+                                    <input id="form1_7" name="A2" type="radio" class="formItem radioFormItem">
+                                    <label for="form1_7">臥</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">疼痛
+                        <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                    </th>
+                    <td>
+                        <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                        <div class="columnChoice choiceBox">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="form2_1" name="A3" type="checkbox" class="formItem checkboxFormItem">
+                                    <label for="form2_1">無異狀&nbsp;&nbsp;&nbsp; </label>
+                                </div>
+                                <label class="red">(勾選無異狀, 隱藏下方疼痛評估, 下方疼痛評估預設一組, 按+再展開一組)</label>
+                            </div>
+                        </div>
+                        <div class="formList flex">
+                            <div class="subChoice radioBox flex">
+                                <label>姿勢：</label>
+                                <input type="button" value="選部位" name="B12" onclick="selectPain()">
+                                <label><span class="blue">腰部右側</span></label>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="subChoice radioBox">
+                                <label>強度：</label>
+                            </div>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 1
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 2
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 3
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 4
+                                </label>
+
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 5
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 6
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 7
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 8
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 9
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="" autocomplete="off"> 10
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <label>性質：</label>
+                                        <input id="form03_1" name="A3" type="radio" class="formItem radioFormItem" >
+                                        <label for="form03_1">刺痛</label>
+                                        <input id="form03_2" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_2">抽痛</label>
+                                        <input id="form03_3" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_3">刀割痛</label>
+                                        <input id="form03_4" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_4">壓痛</label>
+                                        <input id="form03_5" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_5">鈍痛</label>
+                                        <input id="form03_6" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_6">燒灼痛</label>
+                                        <input id="form03_7" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_7">悶痛</label>
+                                        <input id="form03_8" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_8">戳痛</label>
+                                        <input id="form03_9" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_9">酸痛</label>
+                                        <input id="form03_10" name="A3" type="radio" class="formItem radioFormItem">
+                                        <label for="form03_10">其他</label>
+                                        <input class="oCkTextFormItem" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="5">意識狀態</th>
+                    <th rowspan="5">GCS<br>
+                        [註]</th>
+                    <th >&nbsp;</th>
+                    <td>
+                        <font color="#FF0000">AVPU&nbsp; (VPU, 再填寫GCS)</span></td>
+                </tr>
+                <tr>
+                    <th>睜眼反應(E)</th>
+                    <td>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="" autocomplete="off"> 4
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 3
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 2
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 1
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> C
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>語言反應(V)</th>
+                    <td>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="" autocomplete="off"> 5
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 4
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 3
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 2
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 1
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> A
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> T
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th >肢體反應(M)</th>
+                    <td>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="" autocomplete="off"> 6
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 5
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 4
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 3
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 2
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> 1
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>說明</th>
+                    <td>
+                        <span>**點選[註]才顯示說明內容</span>
+                        <table border="1" width="100%">
+                            <tr>
+                                <td width="12%" style="border-style: solid; border-width: 1px; ">睜眼反應(E)</td>
+                                <td style="border-style: solid; border-width: 1px; ">(4)自主性張眼(Eyes opening sponraneously) <br>
+                                    (3)語言刺激時張眼(Eye opening to speech) <br>
+                                    (2)遇痛張眼(Eye opening in response to pain) <br>
+                                    (1)不張眼(No eye opening) <br>
+                                    (C)腫脹無法睜眼(Eyes closed by swelling)</td>
+                            </tr>
+                            <tr>
+                                <td>語言反應(V)</td>
+                                <td>(5)適當(Oriented)<br>
+                                    (4)混亂(Confused)<br>
+                                    (3)答非所問(Inappropriate words)<br>
+                                    (2)無法辨識的聲音(Incomprehensible sounds)<br>
+                                    (1)無聲音(No verbal response)<br>
+                                    (A)失語(Aphsia)<br>
+                                    (T)氣切或插管(Tracheal/endotracheal tube or tracheostomy)</td>
+                            </tr>
+                            <tr>
+                                <td>肢體反應(M)</td>
+                                <td>(6)可依指示動作(Obeys commands)<br>
+                                    (5)遇痛可移除痛源(Localizes to pain)<br>
+                                    (4)遇痛肢體退縮(Withdrow to pain)<br>
+                                    (3)遇痛肢體屈曲(Flexion to pain)<br>
+                                    (2)遇痛肢體伸張(Extension to pain)<br>
+                                    (1)無反應(No motor response)</td>
+                            </tr>
+                            </tr>
+                        </table>
+                <tr>
+                    <th colspan="3"> 情緒困擾</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C1" name="C1" type="radio" class="formItem radioFormItem" >
+                                        <label for="C1">無</label>
+                                        <input id="C2" name="C1" type="radio" class="formItem radioFormItem">
+                                        <label for="C2">焦慮</label>
+                                        <input id="C3" name="C1" type="radio" class="formItem radioFormItem">
+                                        <label for="C3">憂鬱</label>
+                                        <input id="C4" name="C1" type="radio" class="formItem radioFormItem">
+                                        <label for="C4">恐懼</label>
+                                        <input id="C5" name="C1" type="radio" class="formItem radioFormItem">
+                                        <label for="C5">煩躁</label>
+                                        <label class="red">(勾[無], 其他選項不可勾)</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3"> 問題行為</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C6" name="C2" type="radio" class="formItem radioFormItem" >
+                                        <label for="C6">無</label>
+                                        <input id="C7" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C7">負面言詞</label>
+                                        <input id="C8" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C8">傷害自己</label>
+                                        <input id="C9" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C9">傷害他人</label>
+                                        <input id="C10" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C10">自拔管路</label>
+                                        <input id="C11" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C11">拒絕進食</label>
+                                        <input id="C12" name="C2" type="radio" class="formItem radioFormItem">
+                                        <label for="C12">過量進食</label>
+                                        <label class="red">(勾[無], 其他選項不可勾)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="5"> 心肺循環</th>
+                    <th colspan="2"> 心臟節律器</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="V1" name="R5" type="radio" class="formItem radioFormItem" onclick="modenone()">
+                                    <label for="V1">無</label>
+                                    <input id="V2" name="R5" type="radio" class="formItem radioFormItem" onclick="Divmode()">
+                                    <label for="V2">有</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mode" style="display:none">
+                            <div class="subChoice radioBox flex">
+                                <label>模式：</label>
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="V3" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V3">VVI</label>
+                                        <input id="V4" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V4">VVIR</label>
+                                        <input id="V5" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V5">AAI</label>
+                                        <input id="V6" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V6">AAIR</label>
+                                        <input id="V7" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V7">VDD</label>
+                                        <input id="V8" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V8">DDD</label>
+                                        <input id="V9" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V9">DDDR</label>
+                                        <input id="V10" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V10">CRT-DDDR</label>
+                                        <input id="V11" name="R6" type="radio" class="formItem radioFormItem">
+                                        <label for="V11">不詳</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 呼吸輔助</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="C13" name="C13" type="radio" class="formItem radioFormItem">
+                                    <label for="C13">無</label>
+                                    <input id="C14" name="C13" type="radio" class="formItem radioFormItem">
+                                    <label for="C14">氧氣</label>
+                                    <div class="form-group inline-flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text">
+                                            </div>
+                                        </div>
+                                        <lable>L/min,SpO2</lable>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text">
+                                            </div>
+                                        </div>
+                                        <lable>%</lable>
+                                    </div>
+                                    <input id="C15" name="C13" type="radio" class="formItem radioFormItem">
+                                    <label for="C15">氣切</label>
+                                    <input id="C16" name="C13" type="radio" class="formItem radioFormItem">
+                                    <label for="C16">呼吸器</label>
+                                    <input id="C17" name="C13" type="radio" class="formItem radioFormItem">
+                                    <label for="C17">其他</label>
+                                    <div class="form-group inline-flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 呼吸音</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <label>左肺：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R7" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R7">正常</label>
+                                    <input id="R8" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R8">小聲Decrease</label>
+                                    <input id="R9" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R9">囉音Rales</label>
+                                    <input id="R10" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R10">乾囉音Rhonchi</label>
+                                    <input id="R11" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R11">喘鳴Wheeze</label>
+                                    <input id="R12" name="R7" type="radio" class="formItem radioFormItem">
+                                    <label for="R12">無聲Absent</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subChoice radioBox flex">
+                            <label>右肺：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R13" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R13">正常</label>
+                                    <input id="R14" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R14">小聲Decrease</label>
+                                    <input id="R15" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R15">囉音Rales</label>
+                                    <input id="R16" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R16">乾囉音Rhonchi</label>
+                                    <input id="R17" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R17">喘鳴Wheeze</label>
+                                    <input id="R18" name="R8" type="radio" class="formItem radioFormItem">
+                                    <label for="R18">無聲Absent</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th  align="center" colspan="2"> 呼吸型態</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C18" name="C18" type="radio" class="formItem radioFormItem" >
+                                        <label for="C18">正常</label>
+                                        <input id="C19" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C19">端坐</label>
+                                        <input id="C20" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C20">張口</label>
+                                        <input id="C21" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C21">傷害他人</label>
+                                        <input id="C22" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C22">胸骨凹陷</label>
+                                        <input id="C23" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C23">鼻翼擅動</label>
+                                        <input id="C24" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C24">呼吸輔助肌</label>
+                                        <input id="C25" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C25">奇異性</label>
+                                        <input id="C26" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C26">喟嘆式</label>
+                                        <input id="C27" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C27">呼吸暫停</label>
+                                        <input id="C28" name="C18" type="radio" class="formItem radioFormItem">
+                                        <label for="C28">發紺</label>
+                                        <label class="red">(勾[無], 其他選項不可勾)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th  colspan="2"> 呼吸道分泌物</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <label> 排出情形：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R29" name="R9" type="radio" class="formItem radioFormItem" onclick="Secretionnone()">
+                                    <label for="R29">無</label>
+                                    <input id="R30" name="R9" type="radio" class="formItem radioFormItem" onclick="DivSecretion()">
+                                    <label for="R30">自咳</label>
+                                    <input id="R31" name="R9" type="radio" class="formItem radioFormItem" onclick="DivSecretion()">
+                                    <label for="R31">自咳且須協助抽痰</label>
+                                    <input id="R32" name="R9" type="radio" class="formItem radioFormItem" onclick="DivSecretion()">
+                                    <label for="R32">抽痰</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Secretion" style="display:none">
+                            <div class="subChoice radioBox flex">
+                                <label> 顏色：</label>
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="R33" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R33">透明</label>
+                                        <input id="R34" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R34">白</label>
+                                        <input id="R35" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R35">黃</label>
+                                        <input id="R36" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R36">綠</label>
+                                        <input id="R37" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R37">紅</label>
+                                        <input id="R38" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R38">鐵銹色</label>
+                                        <input id="R39" name="B1" type="radio" class="formItem radioFormItem">
+                                        <label for="R39">其他</label>
+                                        <div class="form-group inline-flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem txDivFormItem">
+                                                    <input class="formItem textFormItem" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subChoice radioBox flex">
+                                <label> 性狀：</label>
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="R40" name="R10" type="radio" class="formItem radioFormItem">
+                                        <label for="R40">黏</label>
+                                        <input id="R41" name="R10" type="radio" class="formItem radioFormItem">
+                                        <label for="R41">稀</label>
+                                        <input id="R42" name="R10" type="radio" class="formItem radioFormItem">
+                                        <label for="R42">稠</label>
+                                        <input id="R43" name="R10" type="radio" class="formItem radioFormItem">
+                                        <label for="R43">水狀</label>
+                                        <input id="R44" name="R10" type="radio" class="formItem radioFormItem">
+                                        <label for="R44">泡沫</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="4"> 營養消化</th>
+                    <th colspan="2"> 吞嚥能力</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R45" name="R11" type="radio" class="formItem radioFormItem">
+                                    <label for="R45">正常</label>
+                                    <input id="R46" name="R11" type="radio" class="formItem radioFormItem">
+                                    <label for="R46">偶嗆</label>
+                                    <input id="R47" name="R11" type="radio" class="formItem radioFormItem">
+                                    <label for="R47">易嗆</label>
+                                    <input id="R48" name="R11" type="radio" class="formItem radioFormItem">
+                                    <label for="R48">無法吞嚥</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 營養途徑</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="C32" name="B4" type="radio" class="formItem radioFormItem">
+                                    <label for="C32">口</label>
+                                    <input id="C33" name="B4" type="radio" class="formItem radioFormItem">
+                                    <label for="C33">鼻胃管</label>
+                                    <input id="C34" name="B4" type="radio" class="formItem radioFormItem">
+                                    <label for="C34">PEG</label>
+                                    <input id="C35" name="B4" type="radio" class="formItem radioFormItem">
+                                    <label for="C35">腸造廔</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 進食種類</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="C36" name="R12" type="radio" class="formItem radioFormItem">
+                                    <label for="C36">普通</label>
+                                    <input id="C37" name="R12" type="radio" class="formItem radioFormItem">
+                                    <label for="C37">軟質</label>
+                                    <input id="C38" name="R12" type="radio" class="formItem radioFormItem">
+                                    <label for="C38">半流質</label>
+                                    <input id="C39" name="R12" type="radio" class="formItem radioFormItem">
+                                    <label for="C39">自製流質</label>
+                                    <input id="C40" name="R12" type="radio" class="formItem radioFormItem">
+                                    <label for="C40">管灌商品</label>
+                                    <div class="form-group inline-flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 進食量/天</th>
+                    <td>
+                        <div class="subChoice choiceBox ">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input class="oCkTextFormItem" type="text">
+                                    <span>瓶,</span>
+                                    <input class="oCkTextFormItem" type="text">
+                                    <span>餐,估計熱量</span>
+                                    <input class="oCkTextFormItem" type="text">
+                                    <span>卡,水分</span>
+                                    <input class="oCkTextFormItem" type="text">
+                                    <span>ml</span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3"> 腹部評估</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C50" name="form04" type="radio" class="formItem radioFormItem" >
+                                        <label for="C50">脹氣</label>
+                                        <input id="C51" name="form04" type="radio" class="formItem radioFormItem">
+                                        <label for="C51">腹水</label>
+                                        <input id="C52" name="form04" type="radio" class="formItem radioFormItem">
+                                        <label for="C52">腹部硬塊</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subChoice radioBox flex">
+                                <div class="pFormItem">
+                                    <label>腸蠕動：</label>
+                                    <div class="divFormItem">
+                                        <input id="C53" name="B5" type="radio" class="formItem radioFormItem">
+                                        <label for="C53">無</label>
+                                        <input id="C54" name="B5" type="radio" class="formItem radioFormItem">
+                                        <label for="C54">有,</label>
+                                        <div class="form-group inline-flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem txDivFormItem">
+                                                    <input class="formItem textFormItem" type="text">
+                                                </div>
+                                            </div>
+                                            <label>次/分</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th  rowspan="7" > 排泄功能</th>
+                    <th  rowspan="3" > 排尿</th>
+                    <th> 排尿狀況</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C60" name="C5" type="radio" class="formItem radioFormItem" >
+                                        <label for="C60">自解</label>
+                                        <input id="C61" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C61">失禁</label>
+                                        <input id="C62" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C62">尿布</label>
+                                        <input id="C63" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C63">尿套</label>
+                                        <input id="C64" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C64">單導</label>
+                                        <input id="C65" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C65">留置導尿</label>
+                                        <input id="C66" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C66">膀胱造廔</label>
+                                        <input id="C67" name="C5" type="radio" class="formItem radioFormItem">
+                                        <label for="C67">腎臟造廔</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>尿量/天</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C70" name="B6" type="radio" class="formItem radioFormItem">
+                                        <label for="C70">未記錄</label>
+                                        <input class="oCkTextFormItem" type="text">
+                                        <span>~</span>
+                                        <input class="oCkTextFormItem" type="text">
+                                        <span>ml</span>
+                                        <span class="red">(勾選未記錄,不用輸入尿量值)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th> 尿液性狀</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C71" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C71">黃</label>
+                                        <input id="C72" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C72">棕</label>
+                                        <input id="C73" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C73">血尿</label>
+                                        <input id="C74" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C74">清澈</label>
+                                        <input id="C75" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C75">混濁</label>
+                                        <input id="C76" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C76">沉澱物</label>
+                                        <input id="C77" name="B7" type="radio" class="formItem radioFormItem">
+                                        <label for="C77">紫尿袋症候群</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th rowspan="4" > 排便</th>
+                    <th> 解便形態</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="C80" name="B8" type="radio" class="formItem radioFormItem">
+                                    <label for="C80">正常</label>
+                                    <input id="C81" name="B8" type="radio" class="formItem radioFormItem">
+                                    <label for="C81">便秘</label>
+                                    <input id="C82" name="B8" type="radio" class="formItem radioFormItem">
+                                    <label for="C82">腹瀉</label>
+                                    <input id="C83" name="B8" type="radio" class="formItem radioFormItem">
+                                    <label for="C83">失禁</label>
+                                    <input id="C84" name="B8" type="radio" class="formItem radioFormItem">
+                                    <label for="C84">人工肛門</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th> 輔助方式</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="C90" name="B9" type="radio" class="formItem radioFormItem">
+                                        <label for="C90">無</label>
+                                        <input id="C91" name="B9" type="radio" class="formItem radioFormItem">
+                                        <label for="C91">藥物</label>
+                                        <input id="C92" name="B9" type="radio" class="formItem radioFormItem">
+                                        <label for="C92">灌腸</label>
+                                        <input id="C93" name="B9" type="radio" class="formItem radioFormItem">
+                                        <label for="C93">手挖</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th> 顏色</th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R101" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R101">黃</label>
+                                    <input id="R102" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R102">褐</label>
+                                    <input id="R103" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R103">綠</label>
+                                    <input id="R104" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R104">灰</label>
+                                    <input id="R105" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R105">黑</label>
+                                    <input id="R106" name="B10" type="radio" class="formItem radioFormItem">
+                                    <label for="R106">血</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th> 次數</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input class="oCkTextFormItem" type="text">
+                                        <span>~</span>
+                                        <input class="oCkTextFormItem" type="text">
+                                        <span>日/次</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th  colspan="3" > 皮膚狀況<br>
+                        <img src="../image/upload-photo.png" class="upload"></th>
+                    <td>
+                        <div class="subChoice radioBox flex">
+                            <div class="pFormItem">
+                                <div class="divFormItem">
+                                    <input id="R110" name="B11" type="radio" class="formItem radioFormItem">
+                                    <label for="R110">無</label>
+                                    <input id="R111" name="B11" type="radio" class="formItem radioFormItem" onclick="divskinyes()">
+                                    <label for="R111">有</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id=skinyes style="display:block">
+                            <table class="Visit_inner_table">
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox ">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C100" name="C100" type="radio" class="formItem radioFormItem">
+                                                    <label for="C100">水腫</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <td>
+                                        <div id=Edemayes style="">
+                                            <div class="subChoice radioBox flex">
+                                                <div class="pFormItem">
+                                                    <div class="divFormItem">
+                                                        <input id="R112" name="B12" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R112">全身</label>
+                                                        <input id="R113" name="B12" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R113">局部</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Edema" style="">
+                                            <div class="subChoice radioBox flex">
+                                                <label>右上肢：</label>
+                                                <div class="pFormItem">
+                                                    <div class="divFormItem">
+                                                        <input id="R114" name="B13" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R114">1+</label>
+                                                        <input id="R115" name="B13" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R115">2+</label>
+                                                        <input id="R116" name="B13" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R116">3+</label>
+                                                        <input id="R117" name="B13" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R117">4+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subChoice radioBox flex">
+                                                <label>右下肢：</label>
+                                                <div class="pFormItem">
+                                                    <div class="divFormItem">
+                                                        <input id="R118" name="B14" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R118">1+</label>
+                                                        <input id="R119" name="B14" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R119">2+</label>
+                                                        <input id="R120" name="B14" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R120">3+</label>
+                                                        <input id="R121" name="B14" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R121">4+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subChoice radioBox flex">
+                                                <label>左上肢：</label>
+                                                <div class="pFormItem">
+                                                    <div class="divFormItem">
+                                                        <input id="R122" name="B15" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R122">1+</label>
+                                                        <input id="R123" name="B15" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R123">2+</label>
+                                                        <input id="R124" name="B15" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R124">3+</label>
+                                                        <input id="R125" name="B15" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R125">4+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subChoice radioBox flex">
+                                                <label>左下肢：</label>
+                                                <div class="pFormItem">
+                                                    <div class="divFormItem">
+                                                        <input id="R126" name="B16" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R126">1+</label>
+                                                        <input id="R127" name="B16" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R127">2+</label>
+                                                        <input id="R128" name="B16" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R128">3+</label>
+                                                        <input id="R129" name="B16" type="radio" class="formItem radioFormItem" onclick="DivEdema()">
+                                                        <label for="R129">4+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C101" name="B17" type="radio" class="formItem radioFormItem">
+                                                    <label for="C101">紅疹</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div id="Redrash" style="">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                    <td>
+                                                        <div class="subChoice radioBox flex">
+                                                            <label>部位：</label>
+                                                            <div class="pFormItem">
+                                                                <div class="divFormItem txDivFormItem">
+                                                                    <input class="formItem textFormItem" type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subChoice radioBox flex">
+                                                            <div class="pFormItem">
+                                                                <label>處置：</label>
+                                                                <div class="divFormItem">
+                                                                    <input id="T1" name="B18" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T1">無</label>
+                                                                    <input id="T2" name="B18" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T2">口服藥物</label>
+                                                                    <input id="T3" name="B18" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T3">藥膏</label>
+                                                                    <div class="form-group inline-flex">
+                                                                        <div class="pFormItem">
+                                                                            <div class="divFormItem txDivFormItem">
+                                                                                <input class="formItem textFormItem" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                    <td>
+                                                        <div class="subChoice radioBox flex">
+                                                            <label>部位：</label>
+                                                            <div class="pFormItem">
+                                                                <div class="divFormItem txDivFormItem">
+                                                                    <input class="formItem textFormItem" type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subChoice radioBox flex">
+                                                            <div class="pFormItem">
+                                                                <label>處置：</label>
+                                                                <div class="divFormItem">
+                                                                    <input id="T4" name="B19" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T4">無</label>
+                                                                    <input id="T5" name="B19" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T5">口服藥物</label>
+                                                                    <input id="T6" name="B19" type="radio" class="formItem radioFormItem">
+                                                                    <label for="T6">藥膏</label>
+                                                                    <div class="form-group inline-flex">
+                                                                        <div class="pFormItem">
+                                                                            <div class="divFormItem txDivFormItem">
+                                                                                <input class="formItem textFormItem" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C102" name="B20" type="radio" class="formItem radioFormItem">
+                                                    <label for="C102">水泡</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="T7" name="B21" type="radio" class="formItem radioFormItem">
+                                                                <label for="T7">無</label>
+                                                                <input id="T8" name="B21" type="radio" class="formItem radioFormItem">
+                                                                <label for="T8">口服藥物</label>
+                                                                <input id="T9" name="B21" type="radio" class="formItem radioFormItem">
+                                                                <label for="T9">藥膏</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="B22" name="B22" type="radio" class="formItem radioFormItem">
+                                                                <label for="B22">無</label>
+                                                                <input id="B23" name="B22" type="radio" class="formItem radioFormItem">
+                                                                <label for="B23">口服藥物</label>
+                                                                <input id="B24" name="B22" type="radio" class="formItem radioFormItem">
+                                                                <label for="B24">藥膏</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C103" name="B23" type="radio" class="formItem radioFormItem">
+                                                    <label for="C103">壓損</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>級數：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="T20" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T20">藥膏 </label>
+                                                                <input id="T21" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T21">Wet dressing </label>
+                                                                <input id="T22" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T22">人工皮</label>
+                                                                <input id="T23" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T23">海藻膠 </label>
+                                                                <input id="T24" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T24">泡棉</label>
+                                                                <input id="T25" name="B24" type="radio" class="formItem radioFormItem">
+                                                                <label for="T25">其他</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C104" name="B25" type="radio" class="formItem radioFormItem">
+                                                    <label for="C104">紫斑</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C105" name="B26" type="radio" class="formItem radioFormItem">
+                                                    <label for="C105">壞疽</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>級數：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="B27" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B27">藥膏 </label>
+                                                                <input id="B28" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B28">Wet dressing </label>
+                                                                <input id="B29" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B29">人工皮</label>
+                                                                <input id="B30" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B30">海藻膠 </label>
+                                                                <input id="B31" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B31">泡棉</label>
+                                                                <input id="B32" name="B27" type="radio" class="formItem radioFormItem">
+                                                                <label for="B32">其他</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C106" name="B30" type="radio" class="formItem radioFormItem">
+                                                    <label for="C106">腫瘤</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>級數：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="D1" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D1">藥膏 </label>
+                                                                <input id="D2" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D2">Wet dressing </label>
+                                                                <input id="D3" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D3">人工皮</label>
+                                                                <input id="D4" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D4">海藻膠 </label>
+                                                                <input id="D5" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D5">泡棉</label>
+                                                                <input id="D6" name="B31" type="radio" class="formItem radioFormItem">
+                                                                <label for="D6">其他</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="subChoice choiceBox flex">
+                                            <div class="pFormItem">
+                                                <div class="divFormItem">
+                                                    <input id="C107" name="B32" type="radio" class="formItem radioFormItem">
+                                                    <label for="C107">其他</label>
+                                                </div>
+                                            </div>
+                                            <div class="plus_btn"><img src="../image/plus.png" alt="+"></div>
+                                        </div>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="minus_btn"><img src="../image/minus.png" alt="-"></div>
+                                                <td>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>部位：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <label>級數：</label>
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem txDivFormItem">
+                                                                <input class="formItem textFormItem" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subChoice radioBox flex">
+                                                        <div class="pFormItem">
+                                                            <label>處置：</label>
+                                                            <div class="divFormItem">
+                                                                <input id="T10" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T10">藥膏 </label>
+                                                                <input id="T11" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T11">Wet dressing </label>
+                                                                <input id="T12" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T12">人工皮</label>
+                                                                <input id="T13" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T13">海藻膠 </label>
+                                                                <input id="T14" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T14">泡棉</label>
+                                                                <input id="T15" name="B33" type="radio" class="formItem radioFormItem">
+                                                                <label for="T15">其他</label>
+                                                                <div class="form-group inline-flex">
+                                                                    <div class="pFormItem">
+                                                                        <div class="divFormItem txDivFormItem">
+                                                                            <input class="formItem textFormItem" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th colspan="3" > 個案特殊事件</th>
+                    <td>
+                        <div class="flex">
+                            <div class="subChoice choiceBox ">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="R50" name="B34" type="radio" class="formItem radioFormItem" >
+                                        <label for="R50">無</label>
+                                        <input id="R51" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R51">跌倒</label>
+                                        <input id="R52" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R52">燙傷</label>
+                                        <input id="R53" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R53">骨折</label>
+                                        <input id="R54" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R54">割傷</label>
+                                        <input id="R55" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R55">自殘</label>
+                                        <input id="R56" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R56">暴力事件</label>
+                                        <input id="R57" name="B34" type="radio" class="formItem radioFormItem">
+                                        <label for="R57">其他</label>
+                                        <input class="oCkTextFormItem" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+        </div>
+        </table>
+        <div class="btnAll">
+            <a href="page/page02_2.html" class="btn orange_btn patientDetail">暫存</a>
+            <a href="javascript;;" class="btn patientDetail green_btn">新增存檔</a>
+            <a href="javascript;;" class="btn patientDetail red_btn" onClick="doCancel()">放棄目前修改資料</a>
+        </div>
+    </form>
+</div>
+<!--JS -->
+<script src="../puglin/jquery-3.4.1.min.js"></script>
+<script src="../puglin/bootstrap.min.js"></script>
+<script src="../js/custom.js"></script>
+<script src="../js/cbpFWTabs.js"></script>
+<script>
+    $(document).ready(function () {
+        $("a.patientDetail").on('click',function(e){
+            e.preventDefault();
+            var srcLink = $(this).attr("href");
+            window.parent.postMessage(srcLink, '*');
+        });
+    });
+    (function() {
+
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+            new CBPFWTabs( el );
+        });
+
+    })();
+    function Divmode(){
+        mode.style.display='';
+    }
+
+    function modenone(){
+        mode.style.display='none';
+    }
+
+    function DivSecretion(){
+        Secretion.style.display='';
+    }
+
+    function Secretionnone(){
+        Secretion.style.display='none';
+    }
+
+    function DivEdemayes(){
+        Edemayes.style.display='';
+    }
+
+    function DivEdema(){
+        Edema.style.display='';
+    }
+
+    function Edemanone(){
+        Edema.style.display='none';
+    }
+    function divskinyes() {
+        skinyes.style.display="";
+
+
+    }
+    function DivRedrash(){
+        Redrash.style.display='';
+    }
+
+    function Redrashnone(){
+        Redrash.style.display='none';
+    }
+
+    function Divblister(){
+        blister.style.display='';
+    }
+
+    function blisternone(){
+        blister.style.display='none';
+    }
+</script>
+</body>
+
+</html>

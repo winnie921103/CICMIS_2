@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>臺北榮民總醫院個案整合照護管理系統（CICMS）</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/pushy.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="iframepage">
+<div class="searchbox">
+    <form class="form">
+        <div class="left">
+            <div class="top flex">
+                <div class="form-group form-control-min flex">
+                    <div>
+                        <input type="text" placeholder="A171-2">
+                    </div>
+                </div>
+                <div class="form-group form-control-mid flex">
+                    <div>
+                        <input type="text" placeholder="王小明(男)(健保)">
+                    </div>
+                </div>
+                <div class="form-group flex">
+                    <div>
+                        <input type="text" placeholder="2233445566(A123456789)">
+                    </div>
+                </div>
+                <div class="form-group form-control-mid flex">
+                    <div>
+                        <input type="text" placeholder="19/04/20(89歲)">
+                    </div>
+                </div>
+            </div>
+            <div class="top flex">
+                <div class="form-group flex">
+                    <div>
+                        <input type="text" placeholder="(主診斷名稱)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="bottom flex">
+                <div class="form-group form-control-mid flex">
+                    <label>主治醫師：</label>
+                    <div>
+                        <input type="text" placeholder="DOC1234 王大陸">
+                    </div>
+                </div>
+                <div class="form-group flex">
+                    <label>科別：</label>
+                    <div>
+                        <input type="text" placeholder="心臟內科">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom flex">
+                <div class="form-group flex">
+                    <label>住院日期：</label>
+                    <div>
+                        <div class="pFormItem">
+                            <div class="divFormItem dateDivFormItem">
+                                <!-- <font class="fontFormItem dateFontFormItem"></font> -->
+                                <input class="formItem dateFormItem" type="text" placeholder="108/08/05 (31天)"/>
+                                <!--label class="dateBkFormItem"></label-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group flex">
+                    <label>轉入日期：</label>
+                    <div>
+                        <div class="pFormItem">
+                            <div class="divFormItem dateDivFormItem">
+                                <!-- <font class="fontFormItem dateFontFormItem"></font> -->
+                                <input class="formItem dateFormItem" type="text" placeholder="108/08/25"/>
+                                <!--label class="dateBkFormItem"></label-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--JS -->
+<script type="text/javascript" src="puglin/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="puglin/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+    window.addEventListener('message', function (msg) { getChildrenIframeHeight(msg.data); }, false);
+    function getChildrenIframeHeight(src) {
+        setChildrenIframeHeight(src);
+    }
+    function setChildrenIframeHeight(src) {
+        $("#myIframe").attr("src", src);
+    }
+</script>
+</body>
+
+</html>

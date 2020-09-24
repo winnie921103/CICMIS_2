@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabs.css">
+    <link rel="stylesheet" href="../css/tabstyles.css">
+</head>
+<body class="iframepage">
+    <div class="whiteBg">
+        <div class="title between">
+            <div class="flex-end">
+                <h3><i class="fas fa-angle-double-right"></i>我的個案</h3>
+            </div>
+            <div class="btnAll">
+                <button class="btn" onclick="">居家安寧</button>
+                <button class="btn btnblue" onclick="history.back()">返回</button>
+            </div>
+        </div>
+        <section>
+            <div class="tabs tabs-style-topline">
+                <nav>
+                    <ul>
+                        <li><a href="#section-topline-1"><span>待訪視(1)</span></a></li>
+                        <li><a href="#section-topline-2"><span>管案清單(6)</span></a></li>
+                    </ul>
+                </nav>
+                <div class="content-wrap">
+                    <!--待訪視內容-->
+                    <section id="section-topline-1">
+                        <div class="tableAll">
+                            <div class="toolBar num_detail between">
+                                <div class="formList flex-start">
+                                    <div class="form-group bg flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>總管案數：</label>
+                                                <input class="formItem textFormItem" type="text" value="6"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>居家醫療：</label>
+                                                <input class="formItem textFormItem" type="text" value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>居家護理：</label>
+                                                <input class="formItem textFormItem" type="text" value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>重度居家醫療：</label>
+                                                <input class="formItem textFormItem" type="text" value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>長照個案：</label>
+                                                <input class="formItem textFormItem" type="text" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <label>機構：</label>
+                                                <input class="formItem textFormItem" type="text" value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toolBar between">
+                                <div class="formList flex">
+                                    <div class="form-group flex">
+                                        <label>病歷號：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <label>個案姓名：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem txDivFormItem">
+                                                <input class="formItem textFormItem" type="text"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                    <div class="tableDetail">
+                                        <p>**顯示該護理師負責的個案, 已分派尚未初訪</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tableList table-striped table-bordered table-hover ">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">個案姓名</th>
+                                        <th scope="col">病歷號</th>
+                                        <th scope="col">申請單位</th>
+                                        <th scope="col">申請科別</th>
+                                        <th scope="col">申請日期</th>
+                                        <th scope="col">居家護理師</th>
+                                        <th scope="col">功能</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                            <button class="btn">結案</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                        <td>12345678911</td>
+                                        <td>A168</td>
+                                        <td>心臟內科</td>
+                                        <td>2019/08/22</td>
+                                        <td>楊素茹</td>
+                                        <td> <div class="tableBtn">
+                                            <button class="btn">醫囑單</button>
+                                            <button class="btn">結案</button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!--管案清單內容-->
+                    <section id="section-topline-2">
+                        <div class="accordion" id="accordionExample">
+                            <div class="formList">
+                                <div class="card-header flex" id="headingOne">
+                                    <div class="titel_btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        住院清單
+                                    </div>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                                    <div class="tableAll">
+                                        <div class="toolBar between">
+                                            <div class="formList flex">
+                                                <div class="form-group flex">
+                                                    <label>病歷號：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group flex">
+                                                    <label>個案姓名：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                                <button class="btn orange_btn">轉住院</button>
+                                                <div class="tableDetail">
+                                                    <p>**已收案但在住院中的個案 </p>
+                                                    <p>**若個案在其他醫院住院, 點選[轉住院], 轉換個案狀態後, 顯示在下列清單中。點選[轉在宅]即視為未住院, 回到已派案清單 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table tableList table-striped table-bordered table-hover ">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">個案姓名</th>
+                                                    <th scope="col">病歷號</th>
+                                                    <th scope="col">病房</th>
+                                                    <th scope="col">床號</th>
+                                                    <th scope="col">住院日期</th>
+                                                    <th scope="col">住院天數</th>
+                                                    <th scope="col">居家護理師</th>
+                                                    <th scope="col">個案狀態</th>
+                                                    <th scope="col">功能</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td></td>
+                                                    <td><span class="red">未派案</span></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>A168</td>
+                                                    <td>52</td>
+                                                    <td>2019/08/22</td>
+                                                    <td>56</td>
+                                                    <td>楊素茹</td>
+                                                    <td>已派案</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">轉在宅</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formList">
+                                <div class="card-header flex" id="headingTwo">
+                                    <div class="titel_btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        管案清單
+                                    </div>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                                    <div class="tableAll">
+                                        <div class="toolBar between">
+                                            <div class="formList flex">
+                                                <div class="form-group flex">
+                                                    <label>病歷號：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group flex">
+                                                    <label>個案姓名：</label>
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem txDivFormItem">
+                                                            <input class="formItem textFormItem" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                                                <div class="tableDetail">
+                                                    <p>**初訪記錄完成才算收案</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table tableList table-striped table-bordered table-hover ">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">個案姓名</th>
+                                                    <th scope="col">病歷號</th>
+                                                    <th scope="col">生日</th>
+                                                    <th scope="col">案別</th>
+                                                    <th scope="col">收案日</th>
+                                                    <th scope="col">VPN到期日</th>
+                                                    <th scope="col">居家護理師</th>
+                                                    <th scope="col">功能</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><a href="page/patient.html" class="patientDetail">王OO</a></td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>一般在宅</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                        <button class="btn">結案</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>重度居家醫療</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                        <button class="btn">結案</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>王OO</td>
+                                                    <td>12345678911</td>
+                                                    <td>1930/04/20</td>
+                                                    <td>機構個案</td>
+                                                    <td>2019/08/22</td>
+                                                    <td></td>
+                                                    <td>楊素茹</td>
+                                                    <td> <div class="tableBtn">
+                                                        <button class="btn">醫囑單</button>
+                                                        <button class="btn">結案</button>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div><!-- /content -->
+            </div><!-- /tabs -->
+        </section>
+    </div>
+    <!--JS -->
+    <script src="../puglin/jquery-3.4.1.min.js"></script>
+    <script src="../puglin/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/cbpFWTabs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.patientDetail").on('click',function(e){
+                e.preventDefault();
+                var srcLink = $(this).attr("href");
+                window.parent.postMessage(srcLink, '*');
+            });
+        });
+        (function() {
+
+            [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+                new CBPFWTabs( el );
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

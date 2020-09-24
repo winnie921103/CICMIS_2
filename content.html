@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>臺北榮民總醫院個案整合照護管理系統（CICMS）</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/leftbar.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="content">
+    <div class="bgc">
+        <div class="top">
+            <img src="image/top_bg.png" alt="背景圖上方">
+        </div>
+        <div class="bottom">
+            <img src="image/top_bottom.png" alt="背景圖下方">
+        </div>
+    </div>
+
+    <div class="page-wrapper chiller-theme toggled">
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-search">
+                    <div class="select_box">
+                        <div class="main_menu">
+                            <div>Monday</div>
+                            <div>星期一</div>
+                            <div>2019/08/26</div>
+                            <div class="user_text flex">
+                                <i class="fas fa-user-circle"></i>
+                                <div class="user">
+                                    <div class="account">nurs02</div>
+                                    <div class="name">顏秀芳</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>最新消息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>年度計畫</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>指標監測</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page/listVisitALL.html">
+                                <span>稽核結果回覆</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page/listNHstatus.html">
+                                <span>報表查詢</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page/listNHstatus.html">
+                                <span>建立新指標</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>參數維護</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>備用項目</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="header">
+                <div class="container-fluid between">
+                    <div class="flex">
+                        <div id="show-sidebar" class="menu-btn icon">
+                            <div class="iconSpan">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <a href="content.html" class="logo">
+                            <img src="image/logo.png" alt="臺北榮民總醫院LOGO">
+                        </a>
+                        <div class="main_menu">
+                            <div class="main_title">護理品質管理系統（CICMS）</div>
+                            <!-- <div class="sub_title">居家護理/居家安寧</div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content">
+                <iframe id="myIframe" src="page/listNHstatus.html" width="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+
+    <!--JS -->
+    <script type="text/javascript" src="puglin/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="puglin/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/leftbar.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        window.addEventListener('message', function (msg) { getChildrenIframeHeight(msg.data); }, false);
+        function getChildrenIframeHeight(src) {
+            setChildrenIframeHeight(src);
+        }
+        function setChildrenIframeHeight(src) {
+            $("#myIframe").attr("src", src);
+        }
+    </script>
+</body>
+
+</html>

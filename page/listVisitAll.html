@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabs.css">
+    <link rel="stylesheet" href="../css/tabstyles.css">
+</head>
+<body class="iframepage">
+    <div class="whiteBg">
+        <div class="title between">
+            <div class="flex-end">
+                <h3><i class="fas fa-angle-double-right"></i>訪視評估</h3>
+            </div>
+        </div>
+        <section>
+            <div class="tabs tabs-style-tzoid">
+                <nav>
+                    <ul>
+                        <li><a href="#section-tzoid-1"><span>每次評估</span></a></li>
+                        <li><a href="#section-tzoid-2"><span>定期評估</span></a></li>
+                        <li><a href="#section-tzoid-3"><span>營養評估</span></a></li>
+                        <li><a href="#section-tzoid-4"><span>營養評估(居家安寧)</span></a></li>
+                    </ul>
+                </nav>
+                <div class="content-wrap">
+                      <!--每次評估內容-->
+                    <section id="section-tzoid-1">
+                            <div class="tableAll">
+                                    <div class="toolBar between">
+                                            <a href="page/addVisitEach.html" class="btn patientDetail">新增</a>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table tableList table-striped table-bordered table-hover ">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">記錄日期</th>
+                                                <th scope="col">狀態</th>
+                                                <th scope="col">記錄者</th>
+                                                <th scope="col">功能</th>
+                                             
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>2019/09/15 10:32</td>
+                                                <td>暫存</td>
+                                                <td>李淑娟</td>
+                                                <td> 
+                                                    <button class="btn orange_btn">編輯</button>
+                                                    <button class="btn red_btn">刪除</button>
+                                                    <button class="btn btnblue">列印</button>
+                                                
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                    </section>
+                      <!--定期評估內容-->
+                    <section id="section-tzoid-2">
+                        
+                    </section>
+                      <!--營養評估內容-->
+                    <section id="section-tzoid-3">
+                        
+                    </section>
+                      <!--營養評估(居家安寧)內容-->
+                    <section id="section-tzoid-4">
+                        
+                    </section>
+                </div><!-- /content -->
+            </div><!-- /tabs -->
+        </section>
+        </div>
+    <!--JS -->
+    <script src="../puglin/jquery-3.4.1.min.js"></script>
+    <script src="../puglin/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/cbpFWTabs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.patientDetail").on('click',function(e){
+                e.preventDefault();
+                var srcLink = $(this).attr("href");
+                window.parent.postMessage(srcLink, '*');
+            });
+        });
+        (function() {
+
+            [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+                new CBPFWTabs( el );
+            });
+
+        })();
+    </script>
+</body>
+
+</html>
