@@ -18,7 +18,6 @@
 	display: -moz-flex;
 	display: -ms-flex;
 	display: flex;
-	margin: 0 auto;
 	padding: 0;
 	max-width: 1200px;
 	list-style: none;
