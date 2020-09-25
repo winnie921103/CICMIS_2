@@ -56,7 +56,7 @@
 
 .tabs nav a span {
 	vertical-align: middle;
-	/*font-size: 0.75em;*/
+	font-size: 1.2em;
 }
 
 .tabs nav li.tab-current a {

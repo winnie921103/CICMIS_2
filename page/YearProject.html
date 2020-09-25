@@ -27,10 +27,10 @@
             <div class="tabs tabs-style-topline">
                 <nav>
                     <ul>
-                        <li><a href="#section-topline-1"><span>申請列表(4)</span></a></li>
-                        <li><a href="#section-topline-2"><span>待訪視(3)</span></a></li>
-                        <li><a href="#section-topline-3"><span>管案清單(5)</span></a></li>
-                        <li><a href="#section-topline-4"><span>統計總表</span></a></li>
+                        <li><a href="#section-topline-1"><span>查詢年度計畫</span></a></li>
+                        <li><a href="#section-topline-2"><span>新增計畫項目</span></a></li>
+                        <li><a href="#section-topline-3"><span>設定稽核月份</span></a></li>
+                        <li><a href="#section-topline-4"><span>審核計畫</span></a></li>
                     </ul>
                 </nav>
                 <div class="content-wrap">
@@ -40,169 +40,124 @@
                         <div class="toolBar between">
                             <div class="formList flex">
                                 <div class="form-group flex">
-                                    <label>病歷號：</label>
+                                    <label>年份：</label>
                                     <div class="pFormItem">
-                                        <div class="divFormItem txDivFormItem">
-                                            <input class="formItem textFormItem" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group flex">
-                                    <label>個案姓名：</label>
-                                    <div class="pFormItem">
-                                        <div class="divFormItem txDivFormItem">
-                                            <input class="formItem textFormItem" type="text"/>
-                                        </div>
+                                            <div class="divFormItem slDivFormItem">
+                                                <select class="formItem selectFormItem">
+                                                    <option>2019</option>
+                                                </select>
+                                            </div>
                                     </div>
                                 </div>
                                 <button class="btn"><i class="fas fa-search"></i>查詢</button>
-                                <div class="tableDetail">
-                                    <p> **照會中/未派案/門診病人有醫囑單的        **順序: 照會中-->未派案 ; 再個別依據申請日期由小到大排</p>
-                                </div>
                             </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table tableList table-striped table-bordered table-hover ">
                                 <thead>
                                 <tr>
-                                    <th scope="col">個案姓名</th>
-                                    <th scope="col">病歷號</th>
-                                    <th scope="col">申請單位</th>
-                                    <th scope="col">申請科別</th>
-                                    <th scope="col">申請日期</th>
-                                    <th scope="col">住院日期</th>
-                                    <th scope="col">出院日期</th>
-                                    <th scope="col">地址</th>
-                                    <th scope="col">聯絡電話</th>
-                                    <th scope="col">個案狀態</th>
-                                    <th scope="col">功能</th>
+                                    <th scope="col">去年度</th> 
+                                    <th scope="col">指標項目</th>
+                                    <th scope="col">選擇指標理由(可複選)</th>
+                                    <th scope="col">閾值(%)</th>
+                                    <th scope="col">自訂閾值(%)</th>
+                                    <th scope="col">調整閾值理由</th>
+                                    <th scope="col"> 
+                                        <button class="btn"><i class="fas fa-plus-circle"></i> 新增指標項目</button>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="blue">照會中</span></td>
+                                    <td><i class="fas fa-check-circle"></i></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
                                     <td> <div class="tableBtn">
-                                        <button class="btn">照會回覆</button>
+                                        <button class="btn red_btn">移除</button>
                                     </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>王OO</td>
-                                    <td>12345678911</td>
-                                    <td>A168</td>
-                                    <td>神經內科</td>
-                                    <td>2019/08/17</td>
-                                    <td>2019/08/22</td>
-                                    <td>2019/08/30</td>
-                                    <td>台北市北投區YY路YY巷XX號XX樓</td>
-                                    <td>02-22233445</td>
-                                    <td><span class="red">未派案</span></td>
-                                    <td> <div class="tableBtn">
-                                        <button class="btn">分派</button>
-                                        <button class="btn">退案</button>
-                                        <button class="btn">結案</button>
-                                    </div>
-                                    </td>
-                                </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                          <td>
+                                              <div class="tableBtn">
+                                                  <button class="btn">移除</button>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                          <td>
+                                              <div class="tableBtn">
+                                                  <button class="btn">移除</button>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                          <td>
+                                              <div class="tableBtn">
+                                                  <button class="btn">移除</button>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                     <tr>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                         <td>
+                                             <div class="tableBtn">
+                                                 <button class="btn">移除</button>
+                                             </div>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td></td>
+                                         <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                         <td>
+                                             <div class="tableBtn">
+                                                 <button class="btn">移除</button>
+                                             </div>
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
+                                        <td>
+                                            <div class="tableBtn">
+                                                <button class="btn">移除</button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

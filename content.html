@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>臺北榮民總醫院個案整合照護管理系統（CICMS）</title>
+    <title>臺北榮民總醫院護理品質管理系統</title>
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -30,11 +30,13 @@
                 <div class="sidebar-search">
                     <div class="select_box">
                         <div class="main_menu">
+                         <div class="datetime">
+                            <div class="date">2019/08/26</div>
                             <div>Monday</div>
-                            <div>星期一</div>
-                            <div>2019/08/26</div>
+                            <div class="day">星期一</div>
+                            </div>
                             <div class="user_text flex">
-                                <i class="fas fa-user-circle"></i>
+                                <i class="far fa-user"></i>
                                 <div class="user">
                                     <div class="account">nurs02</div>
                                     <div class="name">顏秀芳</div>
@@ -47,7 +49,7 @@
                 <div class="sidebar-menu">
                     <ul>
                         <li class="active">
-                            <a href="#">
+                            <a href="page/News.html">
                                 <span>最新消息</span>
                             </a>
                         </li>
@@ -108,7 +110,7 @@
                             <img src="image/logo.png" alt="臺北榮民總醫院LOGO">
                         </a>
                         <div class="main_menu">
-                            <div class="main_title">護理品質管理系統（CICMS）</div>
+                            <div class="main_title">護理品質管理系統</div>
                             <!-- <div class="sub_title">居家護理/居家安寧</div> -->
                         </div>
                     </div>
@@ -130,10 +132,14 @@
     <script type="text/javascript" src="js/leftbar.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
-        window.addEventListener('message', function (msg) { getChildrenIframeHeight(msg.data); }, false);
+        window.addEventListener('message', function (msg) {
+            getChildrenIframeHeight(msg.data);
+        }, false);
+
         function getChildrenIframeHeight(src) {
             setChildrenIframeHeight(src);
         }
+
         function setChildrenIframeHeight(src) {
             $("#myIframe").attr("src", src);
         }

@@ -7,7 +7,7 @@
 
 
 .tabs-style-topline nav li {
-	border: 1px solid rgba(40,44,42,0.1);
+	border: 1px solid rgba(40, 44, 42, 0.1);
 }
 
 .tabs-style-topline nav li:not(:last-child) {
@@ -34,13 +34,14 @@
 }
 
 .tabs-style-topline nav li.tab-current a {
-	background: #fff;
-	box-shadow: inset 0 3px 0 #ec6941;
-	color: #ec6941;
+	background: #ff836b;
+	box-shadow: inset 0 3px 0 #dc3545;
+	color: #ffffff;
 }
+
 /*****************************/
 /* Trapezoid
-/*****************************/ 
+/*****************************/
 
 
 .tabs-style-tzoid nav {
@@ -91,7 +92,7 @@
 	outline: 1px solid transparent;
 	border-radius: 10px 10px 0 0;
 	background: #b5b5b5;
-	box-shadow: inset 0 -3px 3px rgba(0,0,0,0.05);
+	box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.05);
 	content: '';
 	-webkit-transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
 	transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
