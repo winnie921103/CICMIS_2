@@ -10,7 +10,6 @@
 .tabs nav {
 	text-align: center;
 }
-
 .tabs nav ul {
 	position: relative;
 	display: -ms-flexbox;
@@ -19,7 +18,7 @@
 	display: -ms-flex;
 	display: flex;
 	padding: 0;
-	max-width: 1200px;
+	
 	list-style: none;
 	-ms-box-orient: horizontal;
 	-ms-box-pack: center;
@@ -32,7 +31,9 @@
 	-ms-justify-content: center;
 	justify-content: center;
 }
-
+.IndicatorMonitoring .tabs nav ul{
+max-width: 800px;
+}
 .tabs nav ul li {
 	position: relative;
 	z-index: 1;

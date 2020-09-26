@@ -242,25 +242,30 @@ select:focus {
 .header img {
     height: 100%;
 }
+
 .user_text i {
- color: #ffffff;
- font-size: 22px;
- border: 3px solid #5ecec0;
- background: #5ecec0;
- padding: 11px;
- border-radius: 9px;
+    color: #ffffff;
+    font-size: 22px;
+    border: 3px solid #5ecec0;
+    background: #5ecec0;
+    padding: 11px;
+    border-radius: 9px;
 }
+
 .user_text .user {
     padding-left: 20px;
 }
+
 .user_text .account {
     color: #464646;
 }
+
 .date {
     font-size: 1.5em;
     font-weight: bold;
     color: #1f2b4d;
 }
+
 .day {
     text-align: center;
     font-weight: bold;
@@ -273,10 +278,12 @@ select:focus {
     color: #5ecb7c;
     padding-bottom: 20px;
 }
-.user_text{
-        padding-bottom: 25px;
-        border-bottom: 1px solid #d3dff1;
+
+.user_text {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d3dff1;
 }
+
 .user_text .name {
     font-size: 18px;
     font-weight: bold;
@@ -650,10 +657,10 @@ body.iframepage {
 }
 
 .title h3 {
- color: #1f2b4d;
- border-right: 1px solid #797979;
- padding-right: 35px;
- font-weight: bold;
+    color: #1f2b4d;
+    border-right: 1px solid #797979;
+    padding-right: 35px;
+    font-weight: bold;
 }
 
 .btn {
@@ -1630,6 +1637,101 @@ body.iframepage {
     width: 330px;
 }
 
+/*最新消息*/
+
+.Quality {
+    width: 50%;
+    background-color: #f6dee2;
+    height: 200px;
+    margin: 2% 0 3%;
+    box-shadow: 10px 10px 1px #fb888538;
+    border: 3px solid #fb8885;
+    position: relative;
+    margin-left: 2%;
+}
+
+.Quality .news_sort {
+    width: 135px;
+    background: #fb8885;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    z-index: 10;
+}
+
+.Nursing {
+    width: 50%;
+    background-color: #f7e8d8;
+    height: 200px;
+    margin: 1% 0 3%;
+    box-shadow: 10px 10px 1px #f7e8d8;
+    border: 3px solid #ffb55c;
+    position: relative;
+    margin-left: 2%;
+}
+
+.Nursing .news_sort {
+    width: 135px;
+    background: #ffb55c;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    z-index: 10;
+}
+
+.System {
+    width: 50%;
+    background-color: #5db3a838;
+    height: 200px;
+    margin: 2% 0 0;
+    box-shadow: 10px 10px 1px #d2e9ec;
+    border: 3px solid #5db3a8;
+    position: relative;
+    margin-left: 2%;
+}
+
+.System .news_sort {
+    width: 135px;
+    background: #5db3a8;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    z-index: 10;
+}
+
+.Quality i,
+.Nursing i,
+.System i {
+    margin-right: 5px;
+}
+
+.Quality .news_wrap,
+.Nursing .news_wrap,
+.System .news_wrap {
+    position: absolute;
+    width: 100%;
+    padding: 15px 10px 10px 25px;
+    display: inline-block;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.Quality ul li,
+.Nursing ul li,
+.System ul li {
+    list-style-type: disc;
+    line-height: 28px;
+}
+
 /*user 修改個人資料*/
 .userContent {
     display: flex;
@@ -1863,6 +1965,4 @@ body.iframepage {
     }
 }
 
-@media (min-width:1681px)and (max-width: 1980px) {
-
-}
+@media (min-width:1681px)and (max-width: 1980px) {}
