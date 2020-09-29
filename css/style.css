@@ -1,4 +1,5 @@
 /* 共用 */
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -14,18 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
@@ -69,11 +59,13 @@ label {
     display: flex;
     align-items: center;
 }
-.J-flex-end{
+
+.J-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end
 }
+
 .flex-end {
     display: flex;
     align-items: flex-end;
@@ -151,8 +143,7 @@ body .btn:disabled:hover {
     margin-left: 5px;
 }
 
-.red,
-a.red:hover {
+.red, a.red:hover {
     color: #fc4f4f;
 }
 
@@ -171,6 +162,7 @@ a.red:hover {
 }
 
 /*表單用寬度*/
+
 .maxhalf {
     max-width: 50%;
     width: 50%;
@@ -196,8 +188,8 @@ a.red:hover {
 }
 
 /*特殊共用*/
-input,
-select {
+
+input, select {
     width: 100%;
     border-radius: 5px;
     box-shadow: none;
@@ -205,8 +197,7 @@ select {
     padding: 6px 10px;
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
     border-radius: 5px;
     border-color: #2cafd6;
     outline: none;
@@ -220,12 +211,15 @@ select:focus {
     display: flex;
     align-items: center;
 }
-.table-responsive{
+
+.table-responsive {
     min-height: calc(100vh - 290px);
 }
+
 /****首頁****/
 
 /*header*/
+
 .header {
     position: fixed;
     top: 0px;
@@ -306,8 +300,7 @@ select:focus {
     align-items: center;
 }
 
-.header .main_btn:hover::before,
-.header .main_btn.active::before {
+.header .main_btn:hover::before, .header .main_btn.active::before {
     content: "";
     position: absolute;
     width: 0%;
@@ -394,6 +387,7 @@ select:focus {
 }
 
 /*content*/
+
 .index .page-wrapper {
     margin: 0 auto;
     text-align: center;
@@ -479,39 +473,32 @@ select:focus {
 }
 
 /*動畫*/
+
 @keyframes swing {
     0% {
         transform: rotate(0deg);
     }
-
     10% {
         transform: rotate(10deg);
     }
-
     30% {
         transform: rotate(0deg);
     }
-
     40% {
         transform: rotate(-10deg);
     }
-
     50% {
         transform: rotate(0deg);
     }
-
     60% {
         transform: rotate(5deg);
     }
-
     70% {
         transform: rotate(0deg);
     }
-
     80% {
         transform: rotate(-5deg);
     }
-
     100% {
         transform: rotate(0deg);
     }
@@ -540,21 +527,25 @@ select:focus {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
 /****內頁****/
+
 /*content Page*/
+
 /*header*/
+
 .content .header .container-fluid {
     padding-left: 0px;
 }
 
 /*icon*/
+
 /* nav-icon-7 */
+
 .icon {
     position: relative;
     width: 50px;
@@ -612,9 +603,8 @@ select:focus {
     transform: scaleX(.8);
 }
 
-
-
 /****iframe****/
+
 .top_content {
     margin-top: 70px;
     position: fixed;
@@ -777,6 +767,7 @@ body.iframepage {
 }
 
 /*個案管理*/
+
 .num_detail .formList .form-group {
     color: #2a5493;
 }
@@ -808,6 +799,7 @@ body.iframepage {
 }
 
 /*每次評估*/
+
 .Visit_inner_table tr {
     background: #f4f4f4 !important;
     border-bottom: 1px solid #adb5bd !important;
@@ -878,6 +870,7 @@ body.iframepage {
 }
 
 /*iframe Top*/
+
 .searchbox .form {
     display: flex;
     justify-content: space-around;
@@ -953,8 +946,11 @@ body.iframepage {
 }
 
 /*.iframepage .bottom .form-group input {*/
+
 /*width: calc(100% - 125px);*/
+
 /*}*/
+
 .iframepage .form .widthInherit.form-group input {
     width: 100%;
 }
@@ -1019,8 +1015,7 @@ body.iframepage {
     text-align: center;
 }
 
-.table th,
-.table td {
+.table th, .table td {
     position: relative;
     border-top: none;
     padding: .5rem .75rem;
@@ -1030,8 +1025,7 @@ body.iframepage {
     white-space: normal;
 }
 
-.table .checkbox,
-.table .checkboxAll {
+.table .checkbox, .table .checkboxAll {
     position: relative;
     display: block;
     border-radius: 5px;
@@ -1044,8 +1038,7 @@ body.iframepage {
     box-sizing: content-box;
 }
 
-.table .checkbox.checked::before,
-.table .checkboxAll.checked::before {
+.table .checkbox.checked::before, .table .checkboxAll.checked::before {
     content: "";
     position: absolute;
     width: 7px;
@@ -1061,6 +1054,7 @@ body.iframepage {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #fffbf3;
 }
+
 .table-striped tbody tr:nth-of-type(even) {
     background-color: #fff;
 }
@@ -1086,6 +1080,7 @@ body.iframepage {
 }
 
 /*個案總表-統計總表*/
+
 .reportAll {
     display: flex;
     align-items: flex-start;
@@ -1132,6 +1127,7 @@ body.iframepage {
 }
 
 /*多選*/
+
 .choiceBox .divFormItem input {
     width: auto;
     display: none;
@@ -1165,14 +1161,12 @@ body.iframepage {
     background-color: #fff;
 }
 
-.choiceBox .divFormItem label.oCkHdFormItem,
-.choiceBox .divFormItem label.oCkBkFormItem {
+.choiceBox .divFormItem label.oCkHdFormItem, .choiceBox .divFormItem label.oCkBkFormItem {
     display: inline;
     padding: 0px;
 }
 
-.choiceBox .divFormItem input+label.oCkHdFormItem:before,
-.choiceBox .divFormItem input+label.oCkBkFormItem:before {
+.choiceBox .divFormItem input+label.oCkHdFormItem:before, .choiceBox .divFormItem input+label.oCkBkFormItem:before {
     display: none;
 }
 
@@ -1199,6 +1193,7 @@ body.iframepage {
 }
 
 /*表單Title的開合*/
+
 .formList .titel_btn {
     position: relative;
     width: 100%;
@@ -1238,7 +1233,6 @@ body.iframepage {
     from {
         transform: translate(0px, -50%) rotate(0deg);
     }
-
     to {
         transform: translate(0px, -50%) rotate(90deg);
     }
@@ -1248,23 +1242,21 @@ body.iframepage {
     from {
         transform: translate(0px, -50%) rotate(90deg);
     }
-
     to {
         transform: translate(0px, -50%) rotate(0deg);
     }
 }
 
 /*text*/
+
 .formList .txDivFormItem {
     display: flex;
     align-items: center;
 }
 
 /*取消各狀況label*/
-.formList .oSlHdFormItem,
-.formList .oSlBkFormItem,
-.formList .divFormItem input+.txBkFormItem,
-.formList .divFormItem .fontFormItem {
+
+.formList .oSlHdFormItem, .formList .oSlBkFormItem, .formList .divFormItem input+.txBkFormItem, .formList .divFormItem .fontFormItem {
     min-width: inherit;
     border-radius: 0px;
     background-color: transparent;
@@ -1278,6 +1270,7 @@ body.iframepage {
 }
 
 /*表單輸入框格式*/
+
 .formList .form {
     padding: 0px 15px;
     display: block;
@@ -1302,6 +1295,7 @@ body.iframepage {
 }
 
 /*多個input*/
+
 .formList .moreInputBox {
     margin: 0px -3px;
 }
@@ -1311,13 +1305,13 @@ body.iframepage {
 }
 
 /*單選*/
+
 .radioBox {
     padding: 6px 0px;
     border-bottom: 1px solid #f4f4f4;
 }
 
-.radioBox label,
-.choiceBox label {
+.radioBox label, .choiceBox label {
     min-width: inherit;
     border-radius: 0px;
     background-color: transparent;
@@ -1336,8 +1330,7 @@ body.iframepage {
     display: none;
 }
 
-.radioBox .divFormItem .oRdTextFormItem,
-.choiceBox .divFormItem .oCkTextFormItem {
+.radioBox .divFormItem .oRdTextFormItem, .choiceBox .divFormItem .oCkTextFormItem {
     /*單選與多選的input顯示*/
     display: inline-block;
     width: 160px;
@@ -1363,13 +1356,11 @@ body.iframepage {
     border: 1px solid #888888;
 }
 
-.radioBox .divFormItem label.oRdHdFormItem,
-.radioBox .divFormItem label.oRdBkFormItem {
+.radioBox .divFormItem label.oRdHdFormItem, .radioBox .divFormItem label.oRdBkFormItem {
     padding-left: 5px;
 }
 
-.radioBox .divFormItem label.oRdHdFormItem:before,
-.radioBox .divFormItem label.oRdBkFormItem:before {
+.radioBox .divFormItem label.oRdHdFormItem:before, .radioBox .divFormItem label.oRdBkFormItem:before {
     display: none;
 }
 
@@ -1386,6 +1377,7 @@ body.iframepage {
 }
 
 /*前input 後單選*/
+
 .formList .hasChoice {
     display: flex;
 }
@@ -1402,12 +1394,14 @@ body.iframepage {
     width: 75%;
     max-width: 75%;
 } */
+
 .formList .hasChoice .radioBox {
     border-bottom: 0;
     white-space: nowrap;
 }
 
 /*隔離暫存按鈕的線*/
+
 .formList .form-footer {
     text-align: right;
     border-top: 1px solid #a5a5a5;
@@ -1445,6 +1439,7 @@ body.iframepage {
 }
 
 /*表格內checkbox後方的文字*/
+
 .formList .controlP p {
     position: absolute;
     left: 50%;
@@ -1453,8 +1448,8 @@ body.iframepage {
 }
 
 /*表格內單選 + 多選*/
-.formList .tableRadioBox .radioBox,
-.table_control .choiceBox {
+
+.formList .tableRadioBox .radioBox, .table_control .choiceBox {
     padding: 0;
     border-bottom: 0;
 }
@@ -1464,6 +1459,7 @@ body.iframepage {
 }
 
 /*表格兩個input*/
+
 .twoInput {
     width: 30%;
 }
@@ -1477,6 +1473,7 @@ body.iframepage {
 }
 
 /*input內填有備註*/
+
 .table_control input {
     padding: 2px 10px;
 }
@@ -1506,6 +1503,7 @@ body.iframepage {
 }
 
 /*副標*/
+
 .formList .subTitle {
     padding: 8px 20px;
     margin: 30px 15px 10px;
@@ -1524,6 +1522,7 @@ body.iframepage {
 }
 
 /*表格內有副標*/
+
 .tableSubTitle {
     background-color: #d1d1d1;
 }
@@ -1538,6 +1537,7 @@ body.iframepage {
 }
 
 /*多個表單內容*/
+
 .formList .formMore {
     margin-top: 15px;
     border-radius: 8px;
@@ -1610,6 +1610,7 @@ body.iframepage {
 }
 
 /*直式選單*/
+
 .columnChoice {
     margin: 0px 15px;
     border-bottom: 0px;
@@ -1623,6 +1624,7 @@ body.iframepage {
 }
 
 /*複選項*/
+
 .subChoice {
     margin-left: 20px;
     padding: 6px 0px;
@@ -1636,12 +1638,12 @@ body.iframepage {
     font-weight: bold;
 }
 
-.subChoice.choiceBox input.textFormItem,
-.subChoice.radioBox input.textFormItem {
+.subChoice.choiceBox input.textFormItem, .subChoice.radioBox input.textFormItem {
     display: inline;
 }
 
 /*加寬格子*/
+
 .subChoice.widthMore input.textFormItem {
     width: 330px;
 }
@@ -1717,15 +1719,11 @@ body.iframepage {
     z-index: 10;
 }
 
-.Quality i,
-.Nursing i,
-.System i {
+.Quality i, .Nursing i, .System i {
     margin-right: 5px;
 }
 
-.Quality .news_wrap,
-.Nursing .news_wrap,
-.System .news_wrap {
+.Quality .news_wrap, .Nursing .news_wrap, .System .news_wrap {
     position: absolute;
     width: 100%;
     padding: 15px 10px 10px 25px;
@@ -1734,53 +1732,63 @@ body.iframepage {
     height: 100%;
 }
 
-.Quality ul li,
-.Nursing ul li,
-.System ul li {
+.Quality ul li, .Nursing ul li, .System ul li {
     list-style-type: disc;
     line-height: 28px;
 }
+
 /*年度計畫*/
-.lastyear_tick{
-     text-align: center;
+
+.lastyear_tick {
+    text-align: center;
     vertical-align: middle;
 }
-.fa-check-circle{
-  font-size: 1.5em;
-    color: #28a745;   
+
+.fa-check-circle {
+    font-size: 1.5em;
+    color: #28a745;
 }
+
 /*指標監測*/
+
 .IndicatorMonitoring .table th {
     vertical-align: middle;
     background: #5db3a8;
     white-space: nowrap;
 }
-.IndicatorMonitoring .radioBox{
+
+.IndicatorMonitoring .radioBox {
     border-bottom: none;
 }
+
 .IndicatorMonitoring tr th {
     vertical-align: middle;
     text-align: center;
     background: #5db3a8;
     color: #fff;
 }
-.IndicatorMonitoring .datetime{
+
+.IndicatorMonitoring .datetime {
     padding: 0;
 }
-.IndicatorMonitoring .content-wrap .gray_btn{
+
+.IndicatorMonitoring .content-wrap .gray_btn {
     width: auto;
 }
-.select_wrap{
-  display: flex;
-  width: 100%;
+
+.select_wrap {
+    display: flex;
+    width: 100%;
 }
-#text{
+
+#text {
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.select_btn{
+
+.select_btn {
     cursor: pointer;
     font-size: 1.2em;
     border-left: 1px solid #ccc;
@@ -1790,33 +1798,39 @@ body.iframepage {
     z-index: 1;
     display: block;
 }
-.select_btn:hover{
+
+.select_btn:hover {
     color: #000;
     -webkit-transition: all ease .3s;
     transition: all ease .3s;
 }
-.dropdownList{
-        position: absolute;
+
+.dropdownList {
+    position: absolute;
     right: 5px;
     top: 40px;
     z-index: 999;
     background: rgb(255, 255, 255);
     width: 100px;
     text-align: center;
- border: 1px solid rgb(193 193 193);
+    border: 1px solid rgb(193 193 193);
     display: none;
 }
-.dropdownList input{
+
+.dropdownList input {
     display: block;
     border: none;
     background: none;
     outline: none;
     border-radius: 0;
 }
+
 .dropdownList input:hover {
-  background: #cde8e5;
+    background: #cde8e5;
 }
+
 /*稽核結果回覆*/
+
 .AuditResultReply tr th {
     vertical-align: middle;
     text-align: left;
@@ -1824,18 +1838,23 @@ body.iframepage {
     color: #fff;
     width: 20%;
 }
-.AuditResultReply table{
+
+.AuditResultReply table {
     width: 65%;
 }
-.AuditResultReply .book{
+
+.AuditResultReply .book {
     float: right;
     padding-right: 5px;
 }
-.AuditResultReply .book img{
-  width: 25px;
+
+.AuditResultReply .book img {
+    width: 25px;
     height: 25px;
 }
+
 /*user 修改個人資料*/
+
 .userContent {
     display: flex;
     padding: 0px 50px;
@@ -1878,169 +1897,142 @@ body.iframepage {
 }
 
 /*RWD*/
+
 @media (min-width: 544px) and (max-width: 768px) {
-
-
     /*頁首*/
     .header .sub_title {
         font-size: 14px;
     }
-
     .header .main_title {
         font-size: 14px;
     }
-
     .header .main_btn {
         font-size: 14px;
         white-space: nowrap;
     }
-
     .header .user_text {
         white-space: nowrap;
         font-size: 12px;
     }
-
-    input,
-    select {
+    input, select {
         font-size: 14px;
     }
-
+    body.iframepage {
+        margin-top: 55px;
+    }
     /*上方病人資訊*/
     .iframepage .searchbox .left .top .form-control-min {
         width: 36% !important;
     }
-
     .searchbox .form .left {
         width: 100%;
     }
-
     .searchbox .form .right {
         width: 100%;
     }
-
     .searchbox .form {
         flex-wrap: wrap;
     }
-
-    #topFrame {
-        height: 200px;
-    }
-
-    #myIframe {
-        margin-top: 255px;
-    }
-
     .btn {
         white-space: nowrap;
         font-size: 1em;
     }
-
     .toolBar .formList {
         flex-wrap: wrap;
     }
-
     /*登入畫面*/
     .index .content {
         width: 90%;
     }
-
     .index .content_inner ul li {
         font-size: 16px;
     }
-
+    /*最新結果*/
+    .Quality, .Nursing, .System {
+        width: 100%;
+        margin: 10% 0 0;
+    }
+    /*稽核結果*/
+    .AuditResultReply table {
+        width: 100%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
     /*頁首*/
     .header .sub_title {
         font-size: 1em;
     }
-
     .header .main_title {
         font-size: 1em;
     }
-
     .header .main_btn {
         font-size: 1.1em;
     }
-
     .header .user_text {
         white-space: nowrap;
     }
-
     /*上方病人資訊*/
     .searchbox .left .top .form-control-min {
         width: 35% !important;
     }
-
     .searchbox .form .left {
         width: 100%;
     }
-
     .searchbox .form .right {
         width: 100%;
     }
-
     .searchbox .form {
         flex-wrap: wrap;
     }
-
-    #topFrame {
-        height: 200px;
+    body.iframepage {
+        margin-top: 55px;
     }
-
-    #myIframe {
-        margin-top: 255px;
-    }
-
     /*登入畫面*/
     .index .content {
         width: 90%;
     }
-
     /*共用按鈕*/
     .btn {
         white-space: nowrap;
         font-size: 1em;
     }
-
     /*表格上方資訊*/
     .toolBar .formList {
         flex-wrap: wrap;
     }
+    /*最新消息*/
+    .Quality {
+        margin: 5% 0;
+        width: 100%;
+    }
+    .Nursing, .System {
+        width: 100%;
+        margin: 10% 0 0;
+    }
 }
 
 @media (min-width: 992px) {
-
-
     .btn {
         white-space: nowrap;
         font-size: 1em;
     }
-
     .toolBar .formList {
         flex-wrap: wrap;
     }
-
-
 }
 
 @media (min-width: 1025px) {
-
     .searchbox .form .right {
         width: 50%;
     }
-
     .searchbox .left .top .form-control-min {
         width: 50% !important;
     }
-
     /*登入畫面*/
     .index .content {
         width: 90%;
     }
-
     .btn {
         white-space: nowrap;
         font-size: 1em;
@@ -2048,12 +2040,10 @@ body.iframepage {
 }
 
 @media (min-width:1025px) and (max-width: 1439px) {
-
     /*標題*/
     .iframepage .whiteBg {
         margin-top: 5.5%;
     }
-
     /*登入畫面*/
     .index .content {
         width: 70%;
@@ -2061,7 +2051,6 @@ body.iframepage {
 }
 
 @media (min-width:1440px)and (max-width: 1680px) {
-
     /*登入畫面*/
     .index .content {
         width: 65%;
