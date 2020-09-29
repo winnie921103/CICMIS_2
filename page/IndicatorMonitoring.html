@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,17 @@
     <link rel="stylesheet" href="../css/tabs.css">
     <link rel="stylesheet" href="../css/tabstyles.css">
 </head>
+
 <body class="iframepage IndicatorMonitoring">
     <div class="whiteBg">
         <div class="title between">
             <div class="flex-end">
-                <h3>年度計畫</h3>
+                <h3>指標監測</h3>
             </div>
             <div class="btnAll">
                 <a href="page/IndicatorMonitoring.html" class="btn blue_btn patientDetail">護理部</a>
                 <a href="page/IndicatorMonitoring_mid.html" class="btn gray_btn patientDetail">中層</a>
-                <a href="IndicatorMonitoring_ward.html" class="btn gray_btn patientDetail">病房</a>
+                <a href="page/IndicatorMonitoring_ward.html" class="btn gray_btn patientDetail">病房</a>
             </div>
         </div>
         <section>
@@ -34,138 +36,212 @@
                 <div class="content-wrap">
                     <!--設定稽核單位-->
                     <section id="section-topline-1">
+                        <div class="tableAll">
+                            <div class="table-responsive">
+                                <table class="table tableList table-striped table-bordered table-hover ">
+                                    <tbody>
+                                        <tr>
+                                            <th>執行時間</th>
+                                            <td>
+                                                <div class="formList datetime flex">
+                                                    <div class="form-group flex">
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem dtDivFormItem">
+                                                                <input class="formItem dtFormItem" type="hidden">
+                                                                <input class="dtDateFormItem" type="text"
+                                                                    value="2019/06/30" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>完成時間</th>
+                                            <td>
+                                                <div class="formList datetime flex">
+                                                    <div class="form-group flex">
+                                                        <div class="pFormItem">
+                                                            <div class="divFormItem dtDivFormItem">
+                                                                <input class="formItem dtFormItem" type="hidden">
+                                                                <input class="dtDateFormItem" type="text"
+                                                                    value="2019/06/30" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>指標項目</th>
+                                            <td colspan="3"><button class="btn">隨機產生</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>區域</th>
+                                            <td colspan="3">
+                                                <div class="subChoice radioBox flex">
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem">
+                                                            <input id="A01" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A01">A區</label>
+                                                            <input id="A02" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A02">B區</label>
+                                                            <input id="A03" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A03">C區</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>病房</th>
+                                            <td colspan="3">
+                                                <div class="subChoice radioBox flex">
+                                                    <div class="pFormItem">
+                                                        <div class="divFormItem">
+                                                            <input id="A04" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A04">隨機A</label>
+                                                            <input id="A05" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A05">隨機B</label>
+                                                            <input id="A06" name="R11" type="radio"
+                                                                class="formItem radioFormItem">
+                                                            <label for="A06">自訂</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="btnAll J-flex-end">
+                            <a href="" class="btn gray_btn">暫存</a>
+                            <a href="" class="btn green_btn">完成</a>
+                        </div>
                     </section>
                     <!--稽核紀錄-->
                     <section id="section-topline-2">
-                                 <div class="tableAll">
-                                     <div class="toolBar between">
-                                         <div class="formList flex">
-                                             <div class="form-group flex">
-                                                 <label>年份：</label>
-                                                 <div class="pFormItem">
-                                                     <div class="divFormItem slDivFormItem">
-                                                         <select class="formItem selectFormItem">
-                                                             <option>2019</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                             <button class="btn"><i class="fas fa-search"></i>查詢</button>
-                                         </div>
-                                     </div>
-                                     <div class="table-responsive">
-                                         <table class="table tableList table-striped table-bordered table-hover ">
-                                             <thead>
-                                                 <tr>
-                                                     <th scope="col">去年度</th>
-                                                     <th scope="col">指標項目</th>
-                                                     <th scope="col">選擇指標理由(可複選)</th>
-                                                     <th scope="col">閾值(%)</th>
-                                                     <th scope="col">自訂閾值(%)</th>
-                                                     <th scope="col">調整閾值理由</th>
-                                                     <th scope="col">
-                                                         <button class="btn"><i class="fas fa-plus-circle"></i>
-                                                             新增指標項目</button>
-                                                     </th>
-                                                 </tr>
-                                             </thead>
-                                             <tbody>
-                                                 <tr>
-                                                     <td><i class="fas fa-check-circle"></i></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn red_btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td></td>
-                                                     <td><span class="blue">前三年稽核結果平均值未達閾值</span></td>
-                                                     <td>
-                                                         <div class="tableBtn">
-                                                             <button class="btn">移除</button>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                             </tbody>
-                                         </table>
-                                     </div>
-                                 </div>
+                        <div class="tableAll">
+                            <div class="toolBar between">
+                                <div class="formList flex">
+                                    <div class="form-group flex">
+                                        <label>年份：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem slDivFormItem">
+                                                <select class="formItem selectFormItem">
+                                                    <option>2019</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <label>月份：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem slDivFormItem">
+                                                <select class="formItem selectFormItem">
+                                                    <option>01</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group flex">
+                                        <label>單位：</label>
+                                        <div class="pFormItem">
+                                            <div class="divFormItem slDivFormItem">
+                                                <select class="formItem selectFormItem">
+                                                    <option>A134</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn">確定</button>
+                                </div>
+                            </div>
+                            <div class="formList flex">
+                                <div class="form-group flex">
+                                    <label>稽核項目：</label>
+                                    <div class="pFormItem">
+                                        <div class="divFormItem slDivFormItem">
+                                            <select class="formItem selectFormItem">
+                                                <option>身體約束護理正確性</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tableList table-striped table-bordered table-hover ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">項目/床號/</th>
+                                            <th scope="col">3</th>
+                                            <th scope="col">5</th>
+                                            <th scope="col">12</th>
+                                            <th scope="col">23</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>細項5</td>
+                                            <td>
+                                                <div class="select_wrap">
+                                                    <span id="text" class="text">O</span>
+                                                    <a href="#" class="select_btn"><i class="fas fa-angle-down"></i></a>
+                                                    <div class="dropdownList" style="display: none;">
+                                                        <input type="button" id="Pass" value="O">
+                                                        <input type="button" id="Fail" value="X" class="red">
+                                                        <input type="button" id="disable" value="∆">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select_wrap">
+                                                    <span id="text">O</span>
+                                                    <a href="#" class="select_btn"><i class="fas fa-angle-down"></i></a>
+                                                    <div class="dropdownList" style="display: none;">
+                                                        <input type="button" id="Pass" value="O">
+                                                        <input type="button" id="Fail" value="X" class="red">
+                                                        <input type="button" id="disable" value="∆">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select_wrap">
+                                                    <span id="text">O</span>
+                                                    <a href="#" class="select_btn"><i class="fas fa-angle-down"></i></a>
+                                                    <div class="dropdownList" style="display: none;">
+                                                        <input type="button" id="Pass" value="O">
+                                                        <input type="button" id="Fail" value="X" class="red">
+                                                        <input type="button" id="disable" value="∆">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select_wrap">
+                                                    <span id="text">O</span>
+                                                    <a href="#" class="select_btn"><i class="fas fa-angle-down"></i></a>
+                                                    <div class="dropdownList" style="display: none;">
+                                                        <input type="button" id="Pass" value="O">
+                                                        <input type="button" id="Fail" value="X" class="red">
+                                                        <input type="button" id="disable" value="∆">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="btnAll J-flex-end">
+                            <a href="" class="btn gray_btn">暫存</a>
+                            <a href="" class="btn green_btn">完成</a>
+                        </div>
                     </section>
+
                 </div><!-- /content -->
             </div><!-- /tabs -->
         </section>
@@ -177,16 +253,49 @@
     <script src="../js/cbpFWTabs.js"></script>
     <script>
         $(document).ready(function () {
-            $("a.patientDetail").on('click',function(e){
+            $("a.patientDetail").on('click', function (e) {
                 e.preventDefault();
                 var srcLink = $(this).attr("href");
                 window.parent.postMessage(srcLink, '*');
             });
-        });
-        (function() {
+            $(".dropdownList input").on('click', function (e) {
 
-            [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-                new CBPFWTabs( el );
+                if ($(this).attr('id') == 'Pass') {
+                    $(this).parents().siblings('#text').text("O");
+                } else if ($(this).attr('id') == 'Fail') {
+                    $(this).parents().siblings('#text').text("X");
+                } else {
+                    $(this).parents().siblings('#text').text("∆");
+                }
+                $('.dropdownList').hide();
+            });
+
+            $(".select_btn").on('click', function (e) {
+                e.stopPropagation();//阻止事件冒泡
+                var $target = $(e.target);
+                if (!$target.is($(this).siblings('.dropdownList'))) {
+                    //    alert(123)
+                    $(".select_wrap .dropdownList").slideUp();
+                }
+                $(this).siblings('.dropdownList').toggle();
+
+
+                //點擊空白處
+                var flag = true;
+                $(document).bind("click", function (e) {
+                    var target = $(e.target);
+                    if (target.closest('.select_wrap .dropdownList').length == 0 && flag == true) {
+                        $('.select_wrap .dropdownList').hide();
+                        flag = false;
+                    }
+                });
+            });
+        });
+
+        (function () {
+
+            [].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+                new CBPFWTabs(el);
             });
 
         })();

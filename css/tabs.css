@@ -74,7 +74,7 @@ max-width: 800px;
 
 .content-wrap section.content-current {
 	display: block;
-	background: #fff;
+	background: #f4f9ff;
 }
 /* Fallback */
 .no-js .content-wrap section {

@@ -69,7 +69,11 @@ label {
     display: flex;
     align-items: center;
 }
-
+.J-flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end
+}
 .flex-end {
     display: flex;
     align-items: flex-end;
@@ -216,7 +220,9 @@ select:focus {
     display: flex;
     align-items: center;
 }
-
+.table-responsive{
+    min-height: calc(100vh - 290px);
+}
 /****首頁****/
 
 /*header*/
@@ -1055,6 +1061,9 @@ body.iframepage {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #fffbf3;
 }
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+}
 
 .table-hover tbody tr:nth-of-type(odd):hover {
     background-color: rgba(0, 0, 0, .075);
@@ -1731,7 +1740,101 @@ body.iframepage {
     list-style-type: disc;
     line-height: 28px;
 }
-
+/*年度計畫*/
+.lastyear_tick{
+     text-align: center;
+    vertical-align: middle;
+}
+.fa-check-circle{
+  font-size: 1.5em;
+    color: #28a745;   
+}
+/*指標監測*/
+.IndicatorMonitoring .table th {
+    vertical-align: middle;
+    background: #5db3a8;
+    white-space: nowrap;
+}
+.IndicatorMonitoring .radioBox{
+    border-bottom: none;
+}
+.IndicatorMonitoring tr th {
+    vertical-align: middle;
+    text-align: center;
+    background: #5db3a8;
+    color: #fff;
+}
+.IndicatorMonitoring .datetime{
+    padding: 0;
+}
+.IndicatorMonitoring .content-wrap .gray_btn{
+    width: auto;
+}
+.select_wrap{
+  display: flex;
+  width: 100%;
+}
+#text{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.select_btn{
+    cursor: pointer;
+    font-size: 1.2em;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    color: #6c757d;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+.select_btn:hover{
+    color: #000;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+.dropdownList{
+        position: absolute;
+    right: 5px;
+    top: 40px;
+    z-index: 999;
+    background: rgb(255, 255, 255);
+    width: 100px;
+    text-align: center;
+ border: 1px solid rgb(193 193 193);
+    display: none;
+}
+.dropdownList input{
+    display: block;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 0;
+}
+.dropdownList input:hover {
+  background: #cde8e5;
+}
+/*稽核結果回覆*/
+.AuditResultReply tr th {
+    vertical-align: middle;
+    text-align: left;
+    background: #5db3a8;
+    color: #fff;
+    width: 20%;
+}
+.AuditResultReply table{
+    width: 65%;
+}
+.AuditResultReply .book{
+    float: right;
+    padding-right: 5px;
+}
+.AuditResultReply .book img{
+  width: 25px;
+    height: 25px;
+}
 /*user 修改個人資料*/
 .userContent {
     display: flex;
