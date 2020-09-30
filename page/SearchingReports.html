@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabs.css">
+    <link rel="stylesheet" href="../css/tabstyles.css">
+</head>
+
+<body class="iframepage SearchingReports">
+    <div class="whiteBg">
+        <div class="title between">
+            <div class="flex-end">
+                <h3>報表查詢</h3>
+            </div>
+        </div>
+        <section>
+            <div class="tableAll">
+                <div class="toolBar between">
+                    <div class="formList flex">
+                        <div class="form-group flex">
+                            <label>年度：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem slDivFormItem">
+                                    <select class="formItem selectFormItem">
+                                        <option>2019</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group flex">
+                            <label>單位：</label>
+                            <div class="pFormItem">
+                                <div class="divFormItem slDivFormItem">
+                                    <select class="formItem selectFormItem">
+                                        <option>A134</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toolBar">
+                    <div class="formList flex">
+                        <div class="form-group flex">
+                            <label>指標類別：</label>
+                            <div class="subChoice radioBox flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="A01" name="R12" type="radio" class="formItem radioFormItem">
+                                        <label for="A01">過程</label>
+                                        <input id="A02" name="R12" type="radio" class="formItem radioFormItem">
+                                        <label for="A02">結果</label>
+                                        <input id="A03" name="R12" type="radio" class="formItem radioFormItem">
+                                        <label for="A03">全部</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>層級：</label>
+                            <div class="subChoice radioBox flex">
+                                <div class="pFormItem">
+                                    <div class="divFormItem">
+                                        <input id="A04" name="R13" type="radio" class="formItem radioFormItem">
+                                        <label for="A04">部級</label>
+                                        <input id="A05" name="R13" type="radio" class="formItem radioFormItem">
+                                        <label for="A05">中層</label>
+                                        <input id="A06" name="R13" type="radio" class="formItem radioFormItem">
+                                        <label for="A06">病房</label>
+                                        <input id="A07" name="R13" type="radio" class="formItem radioFormItem">
+                                        <label for="A07">病房</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn"><i class="fas fa-search"></i>查詢</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table tableList table-striped table-bordered table-hover ">
+                        <thead>
+                            <tr>
+                                <th colspan="5">過程指標</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th colspan="5">部級</th>
+                            </tr>
+                            <tr>
+                                <th class="th_gray">指標項目</th>
+                                <th class="th_gray">閾值</th>
+                                <th class="th_gray">全院平均值/單位平均值</th>
+                                <th class="th_gray">通過狀態（通過次數/稽核次數）</th>
+                                <th class="th_gray">圖表功能</th>
+                            </tr>
+                            <tr>
+                                <td>急救車管理及使用正確性</td>
+                                <td>100</td>
+                                <td>99/100</td>
+                                <td>2 / 2</td>
+                                <td>
+                                    <div class="btnAll">
+                                        <button class="btn blue_btn">長條圖</button><button class="btn darkblue_btn">折線圖</button><button
+                                            class="btn purple_btn">管制圖</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>給藥正確性及程序完整性</td>
+                                <td>100</td>
+                                <td>100/100</td>
+                                <td>1 / 1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>藥品管理正確性</td>
+                                <td>100</td>
+                                <td>98/100</td>
+                                <td>1/1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">中層</th>
+                            </tr>
+                            <tr>
+                                <th class="th_gray">指標項目</th>
+                                <th class="th_gray">閾值</th>
+                                <th class="th_gray">全院平均值/單位平均值</th>
+                                <th class="th_gray">通過狀態（通過次數/稽核次數）</th>
+                                <th class="th_gray">圖表功能</th>
+                            </tr>
+                            <tr>
+                            <td>生產護理紀錄單完整性</td>
+                            <td>90</td>
+                            <td>100</td>
+                            <td>4 / 4</td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">病房</th>
+                            </tr>
+                            <tr>
+                                <th class="th_gray">指標項目</th>
+                                <th class="th_gray">閾值</th>
+                                <th class="th_gray">全院平均值/單位平均值</th>
+                                <th class="th_gray">通過狀態（通過次數/稽核次數）</th>
+                                <th class="th_gray">圖表功能</th>
+                            </tr>
+                            <tr>
+                                <td>病程護理紀錄完整性</td>
+                                <td>90</td>
+                                <td>100</td>
+                                <td>6 / 6</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table tableList table-striped table-bordered table-hover ">
+                        <thead>
+                            <tr>
+                                <th colspan="5">結果指標</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="th_gray">指標項目</th>
+                                <th class="th_gray">閾值</th>
+                                <th class="th_gray">全院平均值/單位平均值</th>
+                                <th class="th_gray">通過狀態（通過次數/稽核次數）</th>
+                                <th class="th_gray">圖表功能</th>
+                            </tr>
+                            <tr>
+                                <td>外濺發生率</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>外滲發生率</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>住院跌倒發生率</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--JS -->
+    <script src="../puglin/jquery-3.4.1.min.js"></script>
+    <script src="../puglin/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/cbpFWTabs.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.patientDetail").on('click', function (e) {
+                e.preventDefault();
+                var srcLink = $(this).attr("href");
+                window.parent.postMessage(srcLink, '*');
+            });
+        });
+    </script>
+</body>
+
+</html>

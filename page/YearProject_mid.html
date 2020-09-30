@@ -66,8 +66,8 @@
                                              <th scope="col">自訂閾值(%)</th>
                                              <th scope="col">調整閾值理由</th>
                                              <th scope="col">
-                                                 <button class="btn"><i class="fas fa-plus-circle"></i>
-                                                     新增指標項目</button>
+                                                <button onclick="OpenWindow()" class="btn"><i class="fas fa-plus-circle"></i>
+                                                    新增指標項目</button>
                                              </th>
                                          </tr>
                                      </thead>
@@ -195,6 +195,9 @@
                 window.parent.postMessage(srcLink, '*');
             });
         });
+        function OpenWindow() {
+                var myWindow = window.open("../page/YearProject_addplan.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=250,left=1000,width=400,height=400");
+            };
         (function() {
 
             [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
