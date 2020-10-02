@@ -6,8 +6,7 @@
 }
 
 body {
-  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體",
-    sans-serif;
+  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
   font-size: 16px;
   color: #222222;
   background-color: #e8f2ff;
@@ -16,18 +15,7 @@ body {
   overflow-x: hidden;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
@@ -155,8 +143,7 @@ body .btn:disabled:hover {
   margin-left: 5px;
 }
 
-.red,
-a.red:hover {
+.red, a.red:hover {
   color: #fc4f4f;
 }
 
@@ -202,8 +189,7 @@ a.red:hover {
 
 /*特殊共用*/
 
-input,
-select {
+input, select {
   width: 100%;
   border-radius: 5px;
   box-shadow: none;
@@ -211,8 +197,7 @@ select {
   padding: 6px 10px;
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
   border-radius: 5px;
   border-color: #2cafd6;
   outline: none;
@@ -315,8 +300,7 @@ select:focus {
   align-items: center;
 }
 
-.header .main_btn:hover::before,
-.header .main_btn.active::before {
+.header .main_btn:hover::before, .header .main_btn.active::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -487,7 +471,9 @@ select:focus {
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
+
 /*tab*/
+
 .showFrame {
   width: 100%;
   height: 100%;
@@ -679,6 +665,7 @@ select:focus {
 .icon:not(.open):hover span:nth-child(3) {
   transform: scaleX(0.8);
 }
+
 .toggleBar {
   width: 100%;
   height: 0;
@@ -712,7 +699,7 @@ select:focus {
   margin-top: 70px;
   margin-bottom: 10px;
   min-height: calc(100vh - 100px);
-  background: #f4f9ff;
+  background: rgba(244, 249, 255, 0.8);
   border-radius: 30px;
   padding: 10px;
   width: 99.5%;
@@ -858,6 +845,7 @@ body.iframepage {
   transform: translateY(-3px);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
 }
+
 .darkblue_btn {
   background-color: #002060;
   color: #fff;
@@ -866,6 +854,7 @@ body.iframepage {
   margin-left: 10px;
   width: 100px;
 }
+
 .darkblue_btn:hover {
   background-color: #002060;
   border: 1px solid #002060;
@@ -873,6 +862,7 @@ body.iframepage {
   transform: translateY(-3px);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
 }
+
 .purple_btn {
   background-color: #7030a0;
   color: #fff;
@@ -881,6 +871,7 @@ body.iframepage {
   margin-left: 10px;
   width: 100px;
 }
+
 .purple_btn:hover {
   background-color: #7030a0;
   border: 1px solid #7030a0;
@@ -888,6 +879,7 @@ body.iframepage {
   transform: translateY(-3px);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
 }
+
 .btnAll i {
   margin-right: 5px;
 }
@@ -923,6 +915,7 @@ body.iframepage {
   display: flex;
   justify-content: space-around;
 }
+
 .w3-title-bar {
   text-align: center;
   font-size: 17pt;
@@ -936,6 +929,7 @@ body.iframepage {
 .w3-title-bar:hover {
   background-color: #f0f8ff;
 }
+
 /*每次評估*/
 
 .Visit_inner_table tr {
@@ -1153,8 +1147,7 @@ body.iframepage {
   text-align: center;
 }
 
-.table th,
-.table td {
+.table th, .table td {
   position: relative;
   border-top: none;
   padding: 0.5rem 0.75rem;
@@ -1164,8 +1157,7 @@ body.iframepage {
   white-space: normal;
 }
 
-.table .checkbox,
-.table .checkboxAll {
+.table .checkbox, .table .checkboxAll {
   position: relative;
   display: block;
   border-radius: 5px;
@@ -1178,8 +1170,7 @@ body.iframepage {
   box-sizing: content-box;
 }
 
-.table .checkbox.checked::before,
-.table .checkboxAll.checked::before {
+.table .checkbox.checked::before, .table .checkboxAll.checked::before {
   content: "";
   position: absolute;
   width: 7px;
@@ -1274,7 +1265,7 @@ body.iframepage {
   display: none;
 }
 
-.choiceBox .divFormItem input + label {
+.choiceBox .divFormItem input+label {
   position: relative;
   cursor: pointer;
   background-color: transparent;
@@ -1285,11 +1276,11 @@ body.iframepage {
   min-height: 14px;
 }
 
-.formList .titleInput input + label {
+.formList .titleInput input+label {
   min-width: auto;
 }
 
-.choiceBox .divFormItem input + label:before {
+.choiceBox .divFormItem input+label:before {
   content: "";
   position: absolute;
   left: 5px;
@@ -1302,18 +1293,16 @@ body.iframepage {
   background-color: #fff;
 }
 
-.choiceBox .divFormItem label.oCkHdFormItem,
-.choiceBox .divFormItem label.oCkBkFormItem {
+.choiceBox .divFormItem label.oCkHdFormItem, .choiceBox .divFormItem label.oCkBkFormItem {
   display: inline;
   padding: 0px;
 }
 
-.choiceBox .divFormItem input + label.oCkHdFormItem:before,
-.choiceBox .divFormItem input + label.oCkBkFormItem:before {
+.choiceBox .divFormItem input+label.oCkHdFormItem:before, .choiceBox .divFormItem input+label.oCkBkFormItem:before {
   display: none;
 }
 
-.choiceBox .divFormItem input:checked + label:after {
+.choiceBox .divFormItem input:checked+label:after {
   content: "";
   position: absolute;
   left: 11px;
@@ -1399,10 +1388,7 @@ body.iframepage {
 
 /*取消各狀況label*/
 
-.formList .oSlHdFormItem,
-.formList .oSlBkFormItem,
-.formList .divFormItem input + .txBkFormItem,
-.formList .divFormItem .fontFormItem {
+.formList .oSlHdFormItem, .formList .oSlBkFormItem, .formList .divFormItem input+.txBkFormItem, .formList .divFormItem .fontFormItem {
   min-width: inherit;
   border-radius: 0px;
   background-color: transparent;
@@ -1411,7 +1397,7 @@ body.iframepage {
   margin: 0px 5px;
 }
 
-.formList .divFormItem input + .txBkFormItem:before {
+.formList .divFormItem input+.txBkFormItem:before {
   display: none;
 }
 
@@ -1457,8 +1443,7 @@ body.iframepage {
   border-bottom: 1px solid #f4f4f4;
 }
 
-.radioBox label,
-.choiceBox label {
+.radioBox label, .choiceBox label {
   min-width: inherit;
   border-radius: 0px;
   background-color: transparent;
@@ -1477,14 +1462,13 @@ body.iframepage {
   display: none;
 }
 
-.radioBox .divFormItem .oRdTextFormItem,
-.choiceBox .divFormItem .oCkTextFormItem {
+.radioBox .divFormItem .oRdTextFormItem, .choiceBox .divFormItem .oCkTextFormItem {
   /*單選與多選的input顯示*/
   display: inline-block;
   width: 160px;
 }
 
-.radioBox .divFormItem input + label {
+.radioBox .divFormItem input+label {
   position: relative;
   cursor: pointer;
   padding-left: 30px;
@@ -1492,7 +1476,7 @@ body.iframepage {
   text-align: left;
 }
 
-.radioBox .divFormItem input + label:before {
+.radioBox .divFormItem input+label:before {
   content: "";
   position: absolute;
   left: 5px;
@@ -1504,17 +1488,15 @@ body.iframepage {
   border: 1px solid #888888;
 }
 
-.radioBox .divFormItem label.oRdHdFormItem,
-.radioBox .divFormItem label.oRdBkFormItem {
+.radioBox .divFormItem label.oRdHdFormItem, .radioBox .divFormItem label.oRdBkFormItem {
   padding-left: 5px;
 }
 
-.radioBox .divFormItem label.oRdHdFormItem:before,
-.radioBox .divFormItem label.oRdBkFormItem:before {
+.radioBox .divFormItem label.oRdHdFormItem:before, .radioBox .divFormItem label.oRdBkFormItem:before {
   display: none;
 }
 
-.radioBox .divFormItem input:checked + label:after {
+.radioBox .divFormItem input:checked+label:after {
   content: "";
   position: absolute;
   left: 9px;
@@ -1599,13 +1581,12 @@ body.iframepage {
 
 /*表格內單選 + 多選*/
 
-.formList .tableRadioBox .radioBox,
-.table_control .choiceBox {
+.formList .tableRadioBox .radioBox, .table_control .choiceBox {
   padding: 0;
   border-bottom: 0;
 }
 
-.formList .tableRadioBox .choiceBox input + label {
+.formList .tableRadioBox .choiceBox input+label {
   text-align: left;
 }
 
@@ -1789,8 +1770,7 @@ body.iframepage {
   font-weight: bold;
 }
 
-.subChoice.choiceBox input.textFormItem,
-.subChoice.radioBox input.textFormItem {
+.subChoice.choiceBox input.textFormItem, .subChoice.radioBox input.textFormItem {
   display: inline;
 }
 
@@ -1871,15 +1851,11 @@ body.iframepage {
   z-index: 10;
 }
 
-.Quality i,
-.Nursing i,
-.System i {
+.Quality i, .Nursing i, .System i {
   margin-right: 5px;
 }
 
-.Quality .news_wrap,
-.Nursing .news_wrap,
-.System .news_wrap {
+.Quality .news_wrap, .Nursing .news_wrap, .System .news_wrap {
   position: absolute;
   width: 100%;
   padding: 15px 10px 10px 25px;
@@ -1888,29 +1864,31 @@ body.iframepage {
   height: 100%;
 }
 
-.Quality ul li,
-.Nursing ul li,
-.System ul li {
+.Quality ul li, .Nursing ul li, .System ul li {
   list-style-type: disc;
   line-height: 28px;
 }
 
 /*年度計畫*/
+
 .YearProject_addplan .my-custom-scrollbar {
   position: relative;
   height: 355px;
   overflow: auto;
 }
+
 .YearProject_addplan table thead {
   vertical-align: middle;
   background: #b4c6e7;
   color: #000;
 }
+
 .YearProject_addplan table tr th.th_gray {
   background: #d9d9d9;
   text-align: center;
   font-size: 1em;
 }
+
 .lastyear_tick {
   text-align: center;
   vertical-align: middle;
@@ -2024,47 +2002,62 @@ body.iframepage {
   width: 25px;
   height: 25px;
 }
+
+.AuditResultReply .content-wrap .gray_btn {
+  width: auto;
+}
+
 /*報表查詢*/
+
 .SearchingReports .subChoice {
   margin-left: 0;
   margin-right: 20px;
   padding: 6px 0px;
 }
+
 .SearchingReports table thead tr th {
   vertical-align: middle;
   background: #c6e0b4;
   color: #000;
 }
+
 .SearchingReports .table-striped tbody tr {
   vertical-align: middle;
   background: #fff;
   text-align: center;
 }
+
 .SearchingReports .table-striped tbody tr:hover {
   background: #eee;
 }
+
 .SearchingReports table tr th {
   background: #fce4d6;
   text-align: center;
   font-size: 1em;
 }
+
 .SearchingReports table tr th.th_gray {
   background: #d9d9d9;
   text-align: center;
   font-size: 1em;
   white-space: nowrap;
 }
+
 .SearchingReports table:nth-child(1) {
   border: 3px solid #c6e0b4;
 }
+
 .SearchingReports table:nth-child(2) {
   border: 3px solid #b4c6e7;
 }
+
 .SearchingReports table:nth-child(2) thead tr th {
   vertical-align: middle;
   background: #b4c6e7;
   color: #000;
 }
+
 /*user 修改個人資料*/
 
 .userContent {
@@ -2126,8 +2119,7 @@ body.iframepage {
     white-space: nowrap;
     font-size: 12px;
   }
-  input,
-  select {
+  input, select {
     font-size: 14px;
   }
   body.iframepage {
@@ -2165,8 +2157,7 @@ body.iframepage {
     margin: 5% 0;
     width: 100%;
   }
-  .Nursing,
-  .System {
+  .Nursing, .System {
     width: 100%;
     margin: 10% 0 0;
   }
@@ -2238,8 +2229,7 @@ body.iframepage {
     margin: 5% 0;
     width: 100%;
   }
-  .Nursing,
-  .System {
+  .Nursing, .System {
     width: 100%;
     margin: 10% 0 0;
   }
@@ -2263,8 +2253,8 @@ body.iframepage {
     min-width: 100px;
   }
   .SearchingReports .subChoice {
-  width: calc(100% / 3);
-}
+    width: calc(100% / 3);
+  }
 }
 
 @media (min-width: 992px) {
@@ -2312,5 +2302,4 @@ body.iframepage {
   }
 }
 
-@media (min-width: 1681px) and (max-width: 1980px) {
-}
+@media (min-width: 1681px) and (max-width: 1980px) {}
