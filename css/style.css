@@ -788,7 +788,7 @@ body.iframepage {
 .blue_btn:hover {
   background-color: #1a82ff;
   color: #def5ff !important;
-  transform: translateY(0px);
+  transform: translateY(-3px);
   border: 1px solid #1a82ff;
   margin-left: 10px;
   font-weight: bold;
@@ -2003,7 +2003,7 @@ body.iframepage {
   height: 25px;
 }
 
-.AuditResultReply .content-wrap .gray_btn {
+.AuditResultReply .gray_btn {
   width: auto;
 }
 
