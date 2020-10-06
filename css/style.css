@@ -2282,6 +2282,14 @@ body.iframepage {
     white-space: nowrap;
     font-size: 1em;
   }
+  /*最新消息*/
+  .Quality {
+    width: 50%;
+  }
+  .Nursing, .System {
+    width: 50%;
+  }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1439px) {
@@ -2300,6 +2308,14 @@ body.iframepage {
   .index .content {
     width: 65%;
   }
+    /*最新消息*/
+    .Quality {
+      width: 50%;
+    }
+    .Nursing, .System {
+      width: 50%;
+    }
+ 
 }
 
 @media (min-width: 1681px) and (max-width: 1980px) {}
